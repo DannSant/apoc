@@ -19,5 +19,5 @@ func _ready():
 #	pass
 
 
-func _on_new_game_pressed():
+func _on_new_game_pressed():	
 	get_tree().change_scene("res://scenes/main_screen.tscn")

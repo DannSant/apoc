@@ -14,6 +14,7 @@ var armor_cost = 300
 var speed_cost = 200
 
 var next_scene = "res://stages/stage02/stage02.tscn"
+var next_stage_number =0
 
 var scenes = [
 	"res://stages/stage01.tscn",
@@ -44,6 +45,8 @@ onready var dialog = $resources_ui/resources_dialog
 onready var tween = $tween
 onready var ui = $resources_ui
 onready var map = $map_ui
+onready var dialog_popup = $dialog
+onready var dialog_text = $dialog/dialog_text
 
 func _ready():
 	# Called when the node is added to the scene for the first time.
@@ -64,29 +67,31 @@ func _ready():
 	update_attack_attr_ui()
 	update_speed_attr_ui()
 	update_resources_ui()
-	var current_stage = player_globals.get_cur_stage()
+	var current_stage = player_globals.get_cur_stage()	
 	set_next_scene(current_stage)
 	set_stage_map(current_stage)
+	if next_stage_number<=5:
+		_on_lore_button_pressed()
 	print ("Current Stage", player_globals.get_cur_stage())
 	pass
 	
 func set_next_scene(current_stage):
-	var next_scene_idx = current_stage + 1
-	if next_scene_idx>5:
+	next_stage_number = current_stage + 1
+	if next_stage_number>5:
 		get_tree().change_scene("res://scenes/final_screen.tscn")
 	else:
-		next_scene=scenes[next_scene_idx-1]
+		next_scene=scenes[next_stage_number-1]
 	
 func set_stage_map(current_stage):
-	if current_stage==1:
+	if next_stage_number==1:
 		map.texture = map1
-	if current_stage==2:
+	if next_stage_number==2:
 		map.texture = map2
-	if current_stage==3:
+	if next_stage_number==3:
 		map.texture = map3
-	if current_stage==4:
+	if next_stage_number==4:
 		map.texture = map4
-	if current_stage==5:
+	if next_stage_number==5:
 		map.texture = map5
 	
 func set_resources(new_value):
@@ -198,11 +203,34 @@ func load_next_scene():
 func exit_to_title():
 	get_tree().change_scene("res://scenes/main_screen.tscn")
 	pass
-	
-	
 
 
-#func _process(delta):
-#	# Called every frame. Delta is time since last frame.
-#	# Update game logic here.
-#	pass
+func _on_lore_button_pressed():
+	if next_stage_number==1:
+		dialog_text.text = "Transmission incomig... \n\n" + player_globals.lore_text1
+	if next_stage_number==2:
+		dialog_text.text = "Transmission incomig... \n\n" + player_globals.lore_text2
+	if next_stage_number==3:
+		dialog_text.text = "Transmission incomig... \n\n" + player_globals.lore_text3
+	if next_stage_number==4:
+		dialog_text.text = "Transmission incomig... \n\n" + player_globals.lore_text4
+	if next_stage_number==5:
+		dialog_text.text = "Transmission incomig... \n\n" + player_globals.lore_text5
+		
+	dialog_popup.visible=true
+	get_tree().paused=true
+	pass # replace with function body
+
+
+func _on_help_button_pressed():
+	dialog_text.text = player_globals.help_text
+	dialog_popup.visible=true
+	get_tree().paused=true
+	pass # replace with function body
+
+
+func _on_ok_dialog_btn_pressed():
+	dialog_text.text = ""
+	dialog_popup.visible=false
+	get_tree().paused=false
+	pass # replace with function body

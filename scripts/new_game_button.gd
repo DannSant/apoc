@@ -15,8 +15,9 @@ func _gui_input(event):
 		if self.name=="new_game":
 #			print("new")
 			player_globals.reset_attributes()
-			get_tree().change_scene("res://stages/stage01.tscn")
-		else:
+			player_globals.set_cur_stage(0)
+			get_tree().change_scene("res://scenes/resources_screen.tscn")
+		elif self.name=="exit":
 			get_tree().quit()
 #			print("exit")
 			

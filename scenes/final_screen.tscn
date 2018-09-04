@@ -164,7 +164,7 @@ custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode_enabled = false
 bbcode_text = "Epilogue
 The last humans survivors went mad
-They were trying to hand their own advanced technology to their enemies. Who would’ve guessed this turn of events? Now, you alone must find a way to give this powerful technology. Perhaps you will throw it to the nearest star. Or perhaps you will use it to explore the entire universe. Who knows…
+They were trying to hand their own advanced technology to their enemies. Who would've guessed this turn of events? Now, you alone must find a way to give this powerful technology. Perhaps you will throw it to the nearest star. Or perhaps you will use it to explore the entire universe. Who knows…
 "
 visible_characters = -1
 percent_visible = 1.0
@@ -172,7 +172,7 @@ meta_underlined = true
 tab_size = 4
 text = "Epilogue
 The last humans survivors went mad
-They were trying to hand their own advanced technology to their enemies. Who would’ve guessed this turn of events? Now, you alone must find a way to give this powerful technology. Perhaps you will throw it to the nearest star. Or perhaps you will use it to explore the entire universe. Who knows…
+They were trying to hand their own advanced technology to their enemies. Who would've guessed this turn of events? Now, you alone must find a way to give this powerful technology. Perhaps you will throw it to the nearest star. Or perhaps you will use it to explore the entire universe. Who knows…
 "
 scroll_active = true
 scroll_following = false
