@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://characters/enemies/spawner.gd" type="Script" id=1]
+
+[node name="spawner" type="Node2D"]
+
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+velocity = Vector2( 0, 0 )
+wait_time = 0.1
+enemy_type = 0
+spawn_origin = ""
+
+[node name="scene_container" type="Node" parent="." index="0"]
+
+[node name="latency" type="Timer" parent="." index="1"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = true
+_sections_unfolded = [ "Pause" ]
+
+[connection signal="timeout" from="latency" to="." method="_on_latency_timeout"]
+
+

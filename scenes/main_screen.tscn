@@ -1,0 +1,290 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://img/neutron_star_01.jpg" type="Texture" id=1]
+[ext_resource path="res://scripts/bg_sprite.gd" type="Script" id=2]
+[ext_resource path="res://fonts/Space_bold.otf" type="DynamicFontData" id=3]
+[ext_resource path="res://theme/default_theme.tres" type="Theme" id=4]
+[ext_resource path="res://scripts/new_game_button.gd" type="Script" id=5]
+[ext_resource path="res://shared/music/main screen.ogg" type="AudioStream" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+
+size = 55
+use_mipmaps = false
+use_filter = true
+font_data = ExtResource( 3 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="Theme" id=2]
+
+default_font = SubResource( 1 )
+Label/colors/font_color = Color( 0.945313, 0.937927, 0.937927, 1 )
+Label/colors/font_color_shadow = Color( 0, 0, 0, 0 )
+Label/constants/line_spacing = 3
+Label/constants/shadow_as_outline = 0
+Label/constants/shadow_offset_x = 1
+Label/constants/shadow_offset_y = 1
+Label/fonts/font = null
+Label/styles/normal = null
+_sections_unfolded = [ "Label" ]
+
+[node name="main_screen" type="Node" index="0"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." index="0"]
+
+layer = -1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+scroll_offset = Vector2( 0, 0 )
+scroll_base_offset = Vector2( 0, 0 )
+scroll_base_scale = Vector2( 1, 1 )
+scroll_limit_begin = Vector2( 0, 0 )
+scroll_limit_end = Vector2( 0, 0 )
+scroll_ignore_camera_zoom = true
+_sections_unfolded = [ "Scroll" ]
+
+[node name="bg_sprite" type="Sprite" parent="." index="1"]
+
+position = Vector2( 436.565, 227.147 )
+scale = Vector2( 3, 3 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="ui" type="Container" parent="." index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1.0
+margin_top = 2.0
+margin_right = 264.0
+margin_bottom = 478.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+
+[node name="title" type="Label" parent="ui" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 91.0
+margin_top = 86.0
+margin_right = 259.0
+margin_bottom = 172.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+theme = SubResource( 2 )
+custom_colors/font_color = Color( 0.957031, 0.00747681, 0.029732, 1 )
+text = "Apoc"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Theme", "custom_colors", "custom_constants", "custom_fonts", "custom_styles" ]
+
+[node name="new_game" type="Button" parent="ui" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 54.0
+margin_top = 201.0
+margin_right = 295.0
+margin_bottom = 254.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+theme = ExtResource( 4 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "New Game"
+flat = false
+align = 1
+script = ExtResource( 5 )
+_sections_unfolded = [ "Rect", "Theme", "custom_fonts" ]
+
+[node name="extras" type="Button" parent="ui" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 55.0
+margin_top = 280.0
+margin_right = 290.0
+margin_bottom = 327.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+theme = ExtResource( 4 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Credits"
+flat = false
+align = 1
+_sections_unfolded = [ "Rect", "Theme", "Visibility", "custom_fonts" ]
+
+[node name="exit" type="Button" parent="ui" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 55.0
+margin_top = 360.0
+margin_right = 290.0
+margin_bottom = 407.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+theme = ExtResource( 4 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Exit"
+flat = false
+align = 1
+script = ExtResource( 5 )
+_sections_unfolded = [ "Rect", "Theme", "custom_fonts" ]
+
+[node name="credits_bg" type="ColorRect" parent="ui" index="4"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 305.0
+margin_top = 28.0
+margin_right = 777.0
+margin_bottom = 354.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 0.231373, 0.223529, 0.262745, 0.812157 )
+
+[node name="credits_text" type="RichTextLabel" parent="ui/credits_bg" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 13.0
+margin_top = 1.0
+margin_right = 454.0
+margin_bottom = 345.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+bbcode_enabled = false
+bbcode_text = "Credits
+
+Game Design
+	Luis Cisneros Medina
+	Jesus Pineda Garcia
+	Daniel Santiago Larios
+	
+Programming
+	Jesus Pineda Garcia
+	Daniel Santiago Larios
+	
+Art and Design
+	Luis Cisneros Medina
+	Ships based on MillionthVector
+	
+Music
+	Main screen theme
+		Velcer (https://www.youtube.com/channel/UCBZ3UqPSfK9N1AqHdxJn65A)
+	Stages theme
+		Song - Assault on Desert Palace (Remastered)
+		Author - ET16
+		"
+visible_characters = -1
+percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "Credits
+
+Game Design
+	Luis Cisneros Medina
+	Jesus Pineda Garcia
+	Daniel Santiago Larios
+	
+Programming
+	Jesus Pineda Garcia
+	Daniel Santiago Larios
+	
+Art and Design
+	Luis Cisneros Medina
+	Ships based on MillionthVector
+	
+Music
+	Main screen theme
+		Velcer (https://www.youtube.com/channel/UCBZ3UqPSfK9N1AqHdxJn65A)
+	Stages theme
+		Song - Assault on Desert Palace (Remastered)
+		Author - ET16
+		"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
+_sections_unfolded = [ "BBCode", "Material", "Rect" ]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="3"]
+
+stream = ExtResource( 6 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = true
+mix_target = 0
+bus = "Master"
+
+[node name="tween" type="Tween" parent="." index="4"]
+
+repeat = false
+playback_process_mode = 1
+playback_speed = 1.0
+playback/active = false
+playback/repeat = false
+playback/speed = 1.0
+
+[connection signal="pressed" from="ui/extras" to="bg_sprite" method="_on_extras_pressed"]
+
+

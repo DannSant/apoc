@@ -1,0 +1,249 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://ui/label_bg.png" type="Texture" id=1]
+[ext_resource path="res://scripts/powerup_display.gd" type="Script" id=2]
+[ext_resource path="res://ui/shield_01.png" type="Texture" id=3]
+[ext_resource path="res://ui/weapon_01.png" type="Texture" id=4]
+[ext_resource path="res://ui/velocime 01.png" type="Texture" id=5]
+[ext_resource path="res://fonts/Space_bold.otf" type="DynamicFontData" id=6]
+[ext_resource path="res://shared/sfx/shield.wav" type="AudioStream" id=7]
+[ext_resource path="res://shared/sfx/weapons.wav" type="AudioStream" id=8]
+[ext_resource path="res://shared/sfx/hyper_velocity.wav" type="AudioStream" id=9]
+
+[sub_resource type="DynamicFont" id=1]
+
+size = 25
+use_mipmaps = false
+use_filter = true
+font_data = ExtResource( 6 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="Theme" id=2]
+
+default_font = SubResource( 1 )
+Label/colors/font_color = Color( 0.945313, 0.937927, 0.937927, 1 )
+Label/colors/font_color_shadow = Color( 0, 0, 0, 0 )
+Label/constants/line_spacing = 3
+Label/constants/shadow_as_outline = 0
+Label/constants/shadow_offset_x = 1
+Label/constants/shadow_offset_y = 1
+Label/fonts/font = null
+Label/styles/normal = null
+_sections_unfolded = [ "Label" ]
+
+[sub_resource type="DynamicFont" id=3]
+
+size = 25
+use_mipmaps = false
+use_filter = true
+font_data = ExtResource( 6 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="Theme" id=4]
+
+default_font = SubResource( 3 )
+Label/colors/font_color = Color( 0.945313, 0.937927, 0.937927, 1 )
+Label/colors/font_color_shadow = Color( 0, 0, 0, 0 )
+Label/constants/line_spacing = 3
+Label/constants/shadow_as_outline = 0
+Label/constants/shadow_offset_x = 1
+Label/constants/shadow_offset_y = 1
+Label/fonts/font = null
+Label/styles/normal = null
+_sections_unfolded = [ "Label" ]
+
+[sub_resource type="DynamicFont" id=5]
+
+size = 25
+use_mipmaps = false
+use_filter = true
+font_data = ExtResource( 6 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="Theme" id=6]
+
+default_font = SubResource( 5 )
+Label/colors/font_color = Color( 0.945313, 0.937927, 0.937927, 1 )
+Label/colors/font_color_shadow = Color( 0, 0, 0, 0 )
+Label/constants/line_spacing = 3
+Label/constants/shadow_as_outline = 0
+Label/constants/shadow_offset_x = 1
+Label/constants/shadow_offset_y = 1
+Label/fonts/font = null
+Label/styles/normal = null
+_sections_unfolded = [ "Label" ]
+
+[node name="powerup_display" type="NinePatchRect" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 2.0
+margin_top = 1.0
+margin_right = 202.0
+margin_bottom = 62.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 1 )
+patch_margin_left = 100
+patch_margin_top = 15
+patch_margin_right = 100
+patch_margin_bottom = 15
+script = ExtResource( 2 )
+_sections_unfolded = [ "Patch Margin", "Rect", "Visibility" ]
+
+[node name="p1" type="TouchScreenButton" parent="." index="0"]
+
+position = Vector2( 26.54, 20.6191 )
+scale = Vector2( 0.2, 0.2 )
+z_index = 1
+normal = ExtResource( 3 )
+pressed = null
+bitmask = null
+shape = null
+shape_centered = true
+shape_visible = true
+passby_press = false
+action = ""
+visibility_mode = 0
+_sections_unfolded = [ "Material", "Pause", "Rect", "Transform", "Visibility", "Z Index" ]
+
+[node name="p2" type="TouchScreenButton" parent="." index="1"]
+
+position = Vector2( 77.3366, 16.8771 )
+scale = Vector2( 0.3, 0.3 )
+z_index = 1
+normal = ExtResource( 4 )
+pressed = null
+bitmask = null
+shape = null
+shape_centered = true
+shape_visible = true
+passby_press = false
+action = ""
+visibility_mode = 0
+_sections_unfolded = [ "Rect", "Transform", "Z Index" ]
+
+[node name="p3" type="TouchScreenButton" parent="." index="2"]
+
+position = Vector2( 128.632, 13.5275 )
+scale = Vector2( 0.4, 0.4 )
+z_index = 1
+normal = ExtResource( 5 )
+pressed = null
+bitmask = null
+shape = null
+shape_centered = true
+shape_visible = true
+passby_press = false
+action = ""
+visibility_mode = 0
+_sections_unfolded = [ "Rect", "Transform", "Visibility", "Z Index" ]
+
+[node name="l1" type="Label" parent="." index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 32.0
+margin_top = -10.0
+margin_right = 50.0
+margin_bottom = 29.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+theme = SubResource( 2 )
+text = "0"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Anchor", "Rect", "Theme" ]
+
+[node name="l2" type="Label" parent="." index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 90.0
+margin_top = -10.0
+margin_right = 105.0
+margin_bottom = 29.0
+rect_rotation = -1.21213
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+theme = SubResource( 4 )
+text = "0"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "Theme" ]
+
+[node name="l3" type="Label" parent="." index="5"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 145.0
+margin_top = -10.0
+margin_right = 163.0
+margin_bottom = 29.0
+rect_rotation = -1.40327
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+theme = SubResource( 6 )
+text = "0"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Material", "Mouse", "Pause", "Rect", "Size Flags", "Theme", "Visibility", "custom_colors", "custom_constants", "custom_fonts", "custom_styles" ]
+
+[node name="p1_sfx" type="AudioStreamPlayer" parent="." index="6"]
+
+stream = ExtResource( 7 )
+volume_db = 2.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="p2_sfx" type="AudioStreamPlayer" parent="." index="7"]
+
+stream = ExtResource( 8 )
+volume_db = 2.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="p3_sfx" type="AudioStreamPlayer" parent="." index="8"]
+
+stream = ExtResource( 9 )
+volume_db = 2.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[connection signal="pressed" from="p1" to="." method="_on_p1_pressed"]
+
+[connection signal="pressed" from="p2" to="." method="_on_p2_pressed"]
+
+[connection signal="pressed" from="p3" to="." method="_on_p3_pressed"]
+
+

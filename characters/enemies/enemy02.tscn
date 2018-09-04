@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://characters/enemies/enemy01.tscn" type="PackedScene" id=1]
+[ext_resource path="res://characters/enemies/images/ch_en_03.png" type="Texture" id=2]
+
+[sub_resource type="CircleShape2D" id=1]
+
+custom_solver_bias = 0.0
+radius = 65.7689
+
+[node name="enemy02" instance=ExtResource( 1 )]
+
+velocity = Vector2( -1000, 0 )
+rotation_range = 0.1
+armor = 1
+resources_value = 30
+shoot_player = false
+
+[node name="Sprite" parent="Area2D" index="0"]
+
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" parent="Area2D" index="1"]
+
+shape = SubResource( 1 )
+
+

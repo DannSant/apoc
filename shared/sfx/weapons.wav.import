@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/weapons.wav-08d76b078f1d13d15c7924fcc29bc4cc.sample"
+
+[deps]
+
+source_file="res://shared/sfx/weapons.wav"
+dest_files=[ "res://.import/weapons.wav-08d76b078f1d13d15c7924fcc29bc4cc.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

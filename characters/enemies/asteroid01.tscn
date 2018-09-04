@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://characters/enemies/enemy01.tscn" type="PackedScene" id=1]
+[ext_resource path="res://characters/enemies/images/01.png" type="Texture" id=2]
+
+[node name="asteroid01" instance=ExtResource( 1 )]
+
+can_damage_enemy = true
+velocity = Vector2( -50, 0 )
+armor = 5
+resources_value = 100
+shoot_player = false
+base_rotation_speed = 0.2
+
+[node name="Area2D" parent="." index="0"]
+
+_sections_unfolded = [ "Audio Bus", "Collision", "Material", "Transform", "Visibility" ]
+
+[node name="Sprite" parent="Area2D" index="0"]
+
+position = Vector2( -10, -0.275116 )
+scale = Vector2( 1.2, 1.2 )
+texture = ExtResource( 2 )
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]
+
+
