@@ -10,7 +10,7 @@
 [ext_resource path="res://characters/player/player.tscn" type="PackedScene" id=8]
 [ext_resource path="res://theme/default_theme.tres" type="Theme" id=9]
 
-[node name="stage05" type="Node2D" index="0"]
+[node name="stage05" type="Node2D"]
 
 script = ExtResource( 1 )
 
@@ -19,6 +19,7 @@ script = ExtResource( 1 )
 position = Vector2( 6.73743, 7.03238 )
 offset_step = 20
 current_stage = 5
+boss_level = true
 
 [node name="hud" parent="." index="1" instance=ExtResource( 3 )]
 
@@ -30,40 +31,16 @@ _sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "M
 
 [node name="enemy_spawner" type="Node2D" parent="." index="2"]
 
-[node name="spawner01" parent="enemy_spawner" index="0" instance=ExtResource( 4 )]
+[node name="spawner02" parent="enemy_spawner" index="0" instance=ExtResource( 4 )]
 
-wait_time = 2.0
-enemy_type = 1
-
-[node name="spawner02" parent="enemy_spawner" index="1" instance=ExtResource( 4 )]
-
-wait_time = 7.0
-enemy_type = 2
-
-[node name="spawner03" parent="enemy_spawner" index="2" instance=ExtResource( 4 )]
-
-velocity = Vector2( 0, 100 )
-wait_time = 5.0
-enemy_type = 3
-spawn_origin = "N"
-
-[node name="spawner04" parent="enemy_spawner" index="3" instance=ExtResource( 4 )]
-
-velocity = Vector2( 0, -100 )
-wait_time = 7.0
-enemy_type = 3
-spawn_origin = "S"
-
-[node name="spawner05" parent="enemy_spawner" index="4" instance=ExtResource( 4 )]
-
-wait_time = 5.0
+wait_time = 15.0
 enemy_type = 4
 
 [node name="enemy_boss" parent="." index="3" instance=ExtResource( 5 )]
 
-position = Vector2( -243.723, 248.153 )
+position = Vector2( -153.972, 268.098 )
 velocity = Vector2( 10, 0 )
-armor = 10000
+armor = 100
 
 [node name="music" type="AudioStreamPlayer" parent="." index="4"]
 
@@ -80,9 +57,9 @@ stage_number = 5
 
 [node name="player" parent="." index="6" instance=ExtResource( 8 )]
 
-position = Vector2( 141.11, 258.219 )
+position = Vector2( 175.084, 263.397 )
 ship_speed = 0
-max_armor = 5
+max_armor = 500
 
 [node name="Tween" type="Tween" parent="." index="7"]
 

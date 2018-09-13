@@ -48,6 +48,12 @@ func take_damage(damage):
 	
 	pass
 	
+func enrage():
+	$boss_bomb_shooter1.enrage()
+	$boss_bomb_shooter2.enrage()
+	$boss_bomb_shooter3.enrage()
+	pass
+	
 func do_explotion():
 	var new_explosion = explosion.instance()
 	new_explosion.set_position(get_position())
