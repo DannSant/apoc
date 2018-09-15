@@ -7,7 +7,10 @@ path="res://.import/hyper_velocity.wav-57fa1764d70e418d50db77575edd3e4a.sample"
 [deps]
 
 source_file="res://shared/sfx/hyper_velocity.wav"
+source_md5="6c66f417624fab94b7d9a079597e9974"
+
 dest_files=[ "res://.import/hyper_velocity.wav-57fa1764d70e418d50db77575edd3e4a.sample" ]
+dest_md5="b1ea291968dec5f27f53497c7a0ce1ba"
 
 [params]
 

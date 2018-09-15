@@ -7,7 +7,10 @@ path="res://.import/ch_pl_ls_03.png-e9d01ec097e0df060f842552a7e187a6.stex"
 [deps]
 
 source_file="res://weapons/laser/images/ch_pl_ls_03.png"
+source_md5="951fb56f657982c698bcf4d44618f1e6"
+
 dest_files=[ "res://.import/ch_pl_ls_03.png-e9d01ec097e0df060f842552a7e187a6.stex" ]
+dest_md5="162602af14061fd43f75d45b536a6bb1"
 
 [params]
 

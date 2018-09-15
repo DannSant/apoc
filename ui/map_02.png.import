@@ -7,7 +7,10 @@ path="res://.import/map_02.png-10b73f8002716f0a78dbb9e2eb2fd2a7.stex"
 [deps]
 
 source_file="res://ui/map_02.png"
+source_md5="2da783f3bcf922545df1dcdee399b753"
+
 dest_files=[ "res://.import/map_02.png-10b73f8002716f0a78dbb9e2eb2fd2a7.stex" ]
+dest_md5="3034ed424624f00cdf4f5ffb253fd69e"
 
 [params]
 
