@@ -11,19 +11,22 @@
 
 [node name="stage02" type="Node2D"]
 
+position = Vector2( -6.15161, -6.15164 )
 script = ExtResource( 1 )
 
 [node name="bg" parent="." index="0" instance=ExtResource( 2 )]
 
 position = Vector2( 6.73743, 7.03238 )
-offset_step = 20
+offset_step = 27
 current_stage = 2
 
 [node name="hud" parent="." index="1" instance=ExtResource( 3 )]
 
 modulate = Color( 1, 1, 1, 0.77349 )
-margin_right = 737.0
-margin_bottom = 415.0
+margin_left = 9.0
+margin_top = 14.0
+margin_right = 744.0
+margin_bottom = 425.0
 _sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Mouse", "Rect", "Size Flags", "Theme", "Visibility" ]
 
 [node name="enemy_spawner" type="Node2D" parent="." index="2"]
@@ -31,7 +34,7 @@ _sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "M
 [node name="spawner01" parent="enemy_spawner" index="0" instance=ExtResource( 4 )]
 
 wait_time = 2.0
-enemy_type = 1
+enemy_type = 4
 
 [node name="spawner02" parent="enemy_spawner" index="1" instance=ExtResource( 4 )]
 
@@ -42,7 +45,6 @@ enemy_type = 3
 
 stream = ExtResource( 5 )
 volume_db = 0.0
-pitch_scale = 1.0
 autoplay = true
 mix_target = 0
 bus = "Master"

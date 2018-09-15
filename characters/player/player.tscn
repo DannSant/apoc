@@ -1,16 +1,17 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://characters/player/player.gd" type="Script" id=1]
 [ext_resource path="res://characters/player/images/ch_pl_03.png" type="Texture" id=2]
-[ext_resource path="res://characters/player/images/sphere_05.png" type="Texture" id=3]
-[ext_resource path="res://shared/sfx/laser_01.ogg" type="AudioStream" id=4]
+[ext_resource path="res://characters/player/images/sphere_02.png" type="Texture" id=3]
+[ext_resource path="res://shared/effects/thruster.tscn" type="PackedScene" id=4]
+[ext_resource path="res://shared/sfx/laser_01.ogg" type="AudioStream" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 116.203, 52.3678 )
 
-[node name="player" type="Node2D" index="0"]
+[node name="player" type="Node2D"]
 
 position = Vector2( 66.8938, 264.911 )
 scale = Vector2( 0.3, 0.3 )
@@ -21,6 +22,7 @@ max_armor = 0
 
 [node name="Area2" type="Area2D" parent="." index="0"]
 
+editor/display_folded = true
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -50,46 +52,50 @@ scale = Vector2( 0.28, 0.28 )
 texture = ExtResource( 3 )
 _sections_unfolded = [ "Animation", "Material", "Offset", "Pause", "Region", "Transform", "Visibility", "Z Index" ]
 
-[node name="scene_container" type="Node" parent="." index="2"]
+[node name="thruster" parent="." index="2" instance=ExtResource( 4 )]
 
-[node name="weapon_shoot" type="Timer" parent="." index="3"]
+position = Vector2( -61.2578, 4.90063 )
+z_index = -1
+
+[node name="scene_container" type="Node" parent="." index="3"]
+
+[node name="weapon_shoot" type="Timer" parent="." index="4"]
 
 process_mode = 1
 wait_time = 0.3
 one_shot = false
 autostart = true
 
-[node name="shield_deactivate" type="Timer" parent="." index="4"]
+[node name="shield_deactivate" type="Timer" parent="." index="5"]
 
 process_mode = 1
 wait_time = 5.0
 one_shot = true
 autostart = false
 
-[node name="weapon_pu_deactivate" type="Timer" parent="." index="5"]
+[node name="weapon_pu_deactivate" type="Timer" parent="." index="6"]
 
 process_mode = 1
 wait_time = 5.0
 one_shot = true
 autostart = false
 
-[node name="hyper_velocity_deactivate" type="Timer" parent="." index="6"]
+[node name="hyper_velocity_deactivate" type="Timer" parent="." index="7"]
 
 process_mode = 1
 wait_time = 5.0
 one_shot = true
 autostart = false
 
-[node name="laser_shooter" type="AudioStreamPlayer" parent="." index="7"]
+[node name="laser_shooter" type="AudioStreamPlayer" parent="." index="8"]
 
-stream = ExtResource( 4 )
+stream = ExtResource( 5 )
 volume_db = -17.0
-pitch_scale = 1.0
 autoplay = false
 mix_target = 0
 bus = "Master"
 
-[node name="Tween" type="Tween" parent="." index="8"]
+[node name="Tween" type="Tween" parent="." index="9"]
 
 repeat = false
 playback_process_mode = 1

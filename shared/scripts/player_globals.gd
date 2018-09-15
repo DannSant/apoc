@@ -1,9 +1,9 @@
 extends Node
 
 var default_resources = 0
-var default_shields = 2
-var default_weapon_pu = 2
-var default_hyper_velocity = 2
+var default_shields = 20
+var default_weapon_pu = 4
+var default_hyper_velocity = 4
 
 var resources = 0
 var shields = 0

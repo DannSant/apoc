@@ -59,6 +59,11 @@ func _process(delta):
 	get_node("ParallaxBackground").set_scroll_offset(Vector2(-offset,0))
 	
 	pass
+	
+func shake():
+	get_node("shaking").shake()
+	pass
+
 
 func get_scroll_offset():
 	return get_node("ParallaxBackground").get_scroll_offset()

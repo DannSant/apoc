@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://stages/bg/bg.gd" type="Script" id=1]
+[ext_resource path="res://shared/effects/shaking.tscn" type="PackedScene" id=2]
 
 [node name="bg" type="Node2D"]
 
@@ -8,6 +9,7 @@ script = ExtResource( 1 )
 offset_step = 0
 current_stage = 0
 texture = ""
+boss_level = false
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="." index="0"]
 
@@ -35,5 +37,7 @@ _sections_unfolded = [ "Motion", "Transform" ]
 position = Vector2( 1920, 240.87 )
 scale = Vector2( 1, 1.01564 )
 _sections_unfolded = [ "Animation", "Material", "Offset", "Pause", "Region", "Transform", "Visibility", "Z Index" ]
+
+[node name="shaking" parent="." index="1" instance=ExtResource( 2 )]
 
 

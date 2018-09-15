@@ -13,7 +13,6 @@ extents = Vector2( 26.0658, 2.11057 )
 scale = Vector2( 3, 3 )
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
-speed = 1800
 
 [node name="Area2D" type="Area2D" parent="." index="0"]
 
@@ -28,9 +27,8 @@ audio_bus_name = "Master"
 [node name="Sprite" type="Sprite" parent="Area2D" index="0"]
 
 modulate = Color( 0, 0.941406, 0.0809021, 1 )
-rotation = 3.14159
 texture = ExtResource( 2 )
-_sections_unfolded = [ "Transform", "Visibility" ]
+_sections_unfolded = [ "Offset", "Transform", "Visibility" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="1"]
 

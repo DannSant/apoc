@@ -1,16 +1,17 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://characters/enemies/enemy_boss.gd" type="Script" id=1]
 [ext_resource path="res://characters/enemies/images/fat_red.png" type="Texture" id=2]
 [ext_resource path="res://characters/enemies/boss_shooter.tscn" type="PackedScene" id=3]
 [ext_resource path="res://characters/enemies/boss_bomb_shooter.tscn" type="PackedScene" id=4]
+[ext_resource path="res://shared/effects/thruster.tscn" type="PackedScene" id=5]
 
 [sub_resource type="CircleShape2D" id=1]
 
 custom_solver_bias = 0.0
 radius = 89.1747
 
-[node name="enemy_boss" type="Node2D"]
+[node name="enemy_boss" type="Node2D" index="0"]
 
 position = Vector2( 29.0001, 242.001 )
 scale = Vector2( 0.3, 0.3 )
@@ -94,6 +95,26 @@ wait_time = 5
 
 position = Vector2( -399.114, -296.348 )
 wait_time = 6
+
+[node name="thruster" parent="." index="10" instance=ExtResource( 5 )]
+
+position = Vector2( -447.921, -78.7356 )
+scale = Vector2( 2, 1 )
+
+[node name="thruster2" parent="." index="11" instance=ExtResource( 5 )]
+
+position = Vector2( -443.929, 43.0076 )
+scale = Vector2( 2, 1 )
+
+[node name="thruster3" parent="." index="12" instance=ExtResource( 5 )]
+
+position = Vector2( -394.034, 148.785 )
+scale = Vector2( 2, 1 )
+
+[node name="thruster4" parent="." index="13" instance=ExtResource( 5 )]
+
+position = Vector2( -376.072, -186.509 )
+scale = Vector2( 2, 1 )
 
 [connection signal="timeout" from="shoot_timer" to="." method="_on_shoot_timer_timeout"]
 

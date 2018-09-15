@@ -110,8 +110,10 @@ func _on_Area2_area_entered(area):
 	if not shield_activated:
 		armor = armor - 1
 		get_parent().get_node("hud").set_damage((max_armor - armor)*20)
-				
+
+	
 	do_explotion()
+	get_parent().get_node("bg").shake()
 	
 	if armor <=0:
 		queue_free()

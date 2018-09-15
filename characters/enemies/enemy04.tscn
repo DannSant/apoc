@@ -6,9 +6,22 @@
 [node name="enemy04" instance=ExtResource( 1 )]
 
 resources_value = 45
+shoot_player = true
 
 [node name="Sprite" parent="Area2D" index="0"]
 
 texture = ExtResource( 2 )
+
+[node name="thruster" parent="." index="1"]
+
+visible = false
+
+[node name="thruster2" parent="." index="2"]
+
+position = Vector2( 89.4792, -26.9176 )
+
+[node name="thruster3" parent="." index="3"]
+
+position = Vector2( 91.3196, 24.7509 )
 
 
