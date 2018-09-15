@@ -18,6 +18,7 @@ script = ExtResource( 1 )
 position = Vector2( 6.73743, 7.03238 )
 offset_step = 20
 current_stage = 4
+boss_level = false
 
 [node name="hud" parent="." index="1" instance=ExtResource( 3 )]
 

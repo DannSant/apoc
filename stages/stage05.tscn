@@ -10,7 +10,7 @@
 [ext_resource path="res://characters/player/player.tscn" type="PackedScene" id=8]
 [ext_resource path="res://theme/default_theme.tres" type="Theme" id=9]
 
-[node name="stage05" type="Node2D"]
+[node name="stage05" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 
@@ -46,7 +46,6 @@ armor = 100
 
 stream = ExtResource( 6 )
 volume_db = 0.0
-pitch_scale = 1.0
 autoplay = true
 mix_target = 0
 bus = "Master"
@@ -59,7 +58,7 @@ stage_number = 5
 
 position = Vector2( 175.084, 263.397 )
 ship_speed = 0
-max_armor = 500
+max_armor = 5
 
 [node name="Tween" type="Tween" parent="." index="7"]
 
