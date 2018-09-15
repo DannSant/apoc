@@ -9,11 +9,11 @@
 custom_solver_bias = 0.0
 radius = 100.265
 
-[node name="enemy01" type="Node2D" index="0"]
+[node name="enemy01" type="Node2D"]
 
 scale = Vector2( 0.3, 0.3 )
 script = ExtResource( 1 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Transform", "Z Index" ]
 __meta__ = {
 "_edit_group_": true
 }
@@ -62,6 +62,7 @@ autostart = false
 
 stream = ExtResource( 3 )
 volume_db = -17.0
+pitch_scale = 1.0
 autoplay = false
 mix_target = 0
 bus = "Master"

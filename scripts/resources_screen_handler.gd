@@ -51,7 +51,8 @@ onready var dialog_text = $dialog/dialog_text
 func _ready():
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
-	tween.interpolate_property(ui,"modulate", Color(1,1,1,0), Color(1,1,1,.7),3.0,Tween.TRANS_LINEAR,Tween.EASE_IN)
+	tween.interpolate_property(ui,"modulate", Color(1,1,1,0), Color(1,1,1,.75),3.0,Tween.TRANS_LINEAR,Tween.EASE_IN)
+	tween.interpolate_property($map_ui,"modulate", Color(1,1,1,0), Color(1,1,1,.75),3.0,Tween.TRANS_LINEAR,Tween.EASE_IN)
 	tween.start()
 	
 	attack_cost_lbl.text = str(attack_cost)
@@ -208,6 +209,7 @@ func exit_to_title():
 func _on_lore_button_pressed():
 	if next_stage_number==1:
 		dialog_text.text = "Transmission incomig... \n\n" + player_globals.lore_text1
+		#dialog_text.add_text("Transmission incomig... \n\n" + player_globals.lore_text1)
 	if next_stage_number==2:
 		dialog_text.text = "Transmission incomig... \n\n" + player_globals.lore_text2
 	if next_stage_number==3:

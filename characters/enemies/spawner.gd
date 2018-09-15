@@ -4,6 +4,7 @@ export var velocity = Vector2()
 export var wait_time = 0.0
 export var enemy_type = 0
 export var spawn_origin = ""
+export var background_spawn=false
 
 onready var enemy01 = preload("res://characters/enemies/enemy01.tscn")
 onready var enemy02 = preload("res://characters/enemies/enemy02.tscn")
@@ -53,6 +54,10 @@ func _on_latency_timeout():
 	
 	if new_enemy == null:
 		return
+		
+	if background_spawn:
+		new_enemy.z_index=-1
+		new_enemy.scale=Vector2(0.2,0.2)
 		
 	if velocity.x!=0 || velocity.y!=0:
 		new_enemy.velocity = velocity

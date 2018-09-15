@@ -3,8 +3,10 @@ extends Control
 var resources = 0
 var progress =0
 var light_years =0
+var score = 0
 
 onready var label = get_node("ResourceCounter").get_node("counter_label")
+onready var score_label = get_node("ScoreCounter/counter_label")
 onready var bar = get_node("Bar").get_node("texture_progress_bar")
 onready var label_light_years = get_node("LYCounter").get_node("counter_label")
 #onready var counter_label = $ResourceCounter/counter_label
@@ -28,17 +30,26 @@ func set_resources(newResources):
 	self.resources=newResources
 	label.text =str(newResources)
 	pass
-
-func get_resources():
 	
+func set_score(new_value):
+	self.score=new_value
+	score_label.text =str(new_value)
+	pass
+
+func get_resources():	
 	return self.resources
+	
+func get_score():
+	return self.score
 
 func add_resources(newResources):
-	self.resources+=newResources
-#	var resource_counter = get_node("ResourceCounter")
-#	var label = resource_counter.get_node("counter_label")
-	
+	self.resources+=newResources	
 	label.text =str(resources)
+	pass
+	
+func add_score(new_score):
+	self.score+=new_score	
+	score_label.text =str(new_score)
 	pass
 	
 func add_progress(newValue):

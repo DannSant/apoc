@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://scripts/hud_controller.gd" type="Script" id=1]
 [ext_resource path="res://scenes/ui/Bar.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://scripts/pause_menu.gd" type="Script" id=8]
 [ext_resource path="res://ui/switch_on.png" type="Texture" id=9]
 [ext_resource path="res://scripts/shoot_btn.gd" type="Script" id=10]
+[ext_resource path="res://scenes/ui/ScoreCounter.tscn" type="PackedScene" id=11]
 
 [node name="hud" type="Control"]
 
@@ -33,8 +34,8 @@ script = ExtResource( 1 )
 
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -124.0
-margin_right = 124.0
+margin_left = -180.0
+margin_right = 69.0
 
 [node name="LYCounter" parent="." index="1" instance=ExtResource( 3 )]
 
@@ -46,6 +47,7 @@ anchor_left = 1.0
 anchor_right = 1.0
 margin_left = -117.0
 margin_right = 0.0
+_sections_unfolded = [ "Patch Margin", "Rect" ]
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." index="3"]
 
@@ -87,7 +89,7 @@ margin_bottom = -2.0
 
 [node name="PauseMenu" type="TouchScreenButton" parent="." index="5"]
 
-position = Vector2( 624.705, 2.0359 )
+position = Vector2( 500, 2.0359 )
 scale = Vector2( 0.5, 0.5 )
 normal = ExtResource( 7 )
 pressed = null
@@ -117,6 +119,12 @@ action = ""
 visibility_mode = 0
 script = ExtResource( 10 )
 _sections_unfolded = [ "Rect", "Transform" ]
+
+[node name="ScoreCounter" parent="." index="7" instance=ExtResource( 11 )]
+
+margin_left = 565.0
+margin_right = 682.0
+_sections_unfolded = [ "Patch Margin", "Rect" ]
 
 [connection signal="pressed" from="PauseMenu" to="PauseMenu" method="_on_PauseMenu_pressed"]
 

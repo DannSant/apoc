@@ -12,7 +12,7 @@ func _ready():
 	if get_tree().paused:
 		get_tree().paused=false
 	
-	tween.interpolate_property(ui,"modulate", Color(1,1,1,0), Color(1,1,1,.75),3.0,Tween.TRANS_LINEAR,Tween.EASE_IN)
+	tween.interpolate_property(ui,"modulate", Color(1,1,1,0), Color(1,1,1,.65),3.0,Tween.TRANS_LINEAR,Tween.EASE_IN)
 	tween.start()
 	pass
 

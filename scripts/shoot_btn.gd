@@ -19,7 +19,7 @@ func _ready():
 func _process(delta):
 	if Input.is_action_just_pressed("ui_accept"):
 		toggled = not toggled
-		get_node("../../player").set_shooting(toggled)
+		#get_node("../../player").set_shooting(toggled)
 		if toggled:			
 			normal = textureOn
 		else:
