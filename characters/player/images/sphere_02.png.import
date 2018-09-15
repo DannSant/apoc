@@ -7,7 +7,10 @@ path="res://.import/sphere_02.png-60150b348632fdecad64b34105778d21.stex"
 [deps]
 
 source_file="res://characters/player/images/sphere_02.png"
+source_md5="f5ecdb6e00a1a7b991da9fdd15de2df3"
+
 dest_files=[ "res://.import/sphere_02.png-60150b348632fdecad64b34105778d21.stex" ]
+dest_md5="31ab0cf2c37f8d5863e3a93a272bd50f"
 
 [params]
 

@@ -61,7 +61,7 @@ func move(delta):
 	var mouse_position = get_viewport().get_mouse_position() + Vector2(80,0)
 	var pos_diff = (mouse_position - get_position())
 	
-	if abs(pos_diff.x) > 240 || abs(pos_diff.y) > 240:
+	if abs(pos_diff.x) > 120 || abs(pos_diff.y) > 120:
 		return
 	
 	var motion = pos_diff*delta*20

@@ -7,7 +7,10 @@ path="res://.import/fat_red.png-ede93c9e06b19ded013d7a81519d0f1d.stex"
 [deps]
 
 source_file="res://characters/enemies/images/fat_red.png"
+source_md5="c04a937ea4c659e41999bcf1ad572244"
+
 dest_files=[ "res://.import/fat_red.png-ede93c9e06b19ded013d7a81519d0f1d.stex" ]
+dest_md5="f40c8fe6b07bffe6ecdda6d0ea40d4d5"
 
 [params]
 

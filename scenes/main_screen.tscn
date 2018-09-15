@@ -271,7 +271,6 @@ _sections_unfolded = [ "BBCode", "Material", "Rect" ]
 
 stream = ExtResource( 6 )
 volume_db = 0.0
-pitch_scale = 1.0
 autoplay = true
 mix_target = 0
 bus = "Master"

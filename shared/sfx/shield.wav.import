@@ -7,7 +7,10 @@ path="res://.import/shield.wav-4ac0c82daf2b2400ab4ee6c9f4ea55b7.sample"
 [deps]
 
 source_file="res://shared/sfx/shield.wav"
+source_md5="0cdeffe2cc5694b0815754596ce4a143"
+
 dest_files=[ "res://.import/shield.wav-4ac0c82daf2b2400ab4ee6c9f4ea55b7.sample" ]
+dest_md5="a1d55fe9d40ac2a3f26a46854b793d57"
 
 [params]
 
