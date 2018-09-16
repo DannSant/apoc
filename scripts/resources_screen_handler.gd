@@ -79,6 +79,7 @@ func _ready():
 func set_next_scene(current_stage):
 	next_stage_number = current_stage + 1
 	if next_stage_number>5:
+		player_globals.set_cur_stage(0)
 		get_tree().change_scene("res://scenes/final_screen.tscn")
 	else:
 		next_scene=scenes[next_stage_number-1]

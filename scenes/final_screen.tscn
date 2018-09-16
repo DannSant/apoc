@@ -21,7 +21,7 @@ use_filter = false
 font_data = ExtResource( 3 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="final_screen" type="Node" index="0"]
+[node name="final_screen" type="Node"]
 
 script = ExtResource( 1 )
 
@@ -54,10 +54,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 26.0
-margin_top = 48.0
-margin_right = 784.0
-margin_bottom = 111.0
+margin_left = 71.0
+margin_top = -4.0
+margin_right = 829.0
+margin_bottom = 59.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -66,7 +66,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 4
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0.957031, 0.00747681, 0.029732, 1 )
-text = "Game Over"
+text = "Congratulations!"
 align = 1
 percent_visible = 1.0
 lines_skipped = 0
@@ -79,10 +79,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 37.0
-margin_top = 118.0
-margin_right = 795.0
-margin_bottom = 181.0
+margin_left = -105.0
+margin_top = 74.0
+margin_right = 1026.0
+margin_bottom = 199.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -91,7 +91,9 @@ size_flags_horizontal = 1
 size_flags_vertical = 4
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0.957031, 0.00747681, 0.029732, 1 )
-text = "Thank you for playing!"
+text = "Keep playing to get
+a high score"
+align = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
@@ -119,7 +121,7 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-text = "Main menu"
+text = "Continue"
 flat = false
 align = 1
 _sections_unfolded = [ "Rect", "custom_fonts" ]
@@ -184,7 +186,6 @@ _sections_unfolded = [ "BBCode", "custom_colors" ]
 
 stream = ExtResource( 4 )
 volume_db = 0.0
-pitch_scale = 1.0
 autoplay = true
 mix_target = 0
 bus = "Master"

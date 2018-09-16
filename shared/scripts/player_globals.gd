@@ -12,6 +12,8 @@ var hyper_velocity = 0
 
 var cur_stage = 0
 
+var score = 0
+
 
 var lore_text1 = "The apocalypse is now! Scientists on earth have discovered the advanced technology of the Neutrino Engine, which will allow you to travel to speeds beyond human imagination. But invaders from the System Tau Ceti have heard of the discovering and they are trying to steal it from us. This cannot happen or the humanity will fall. \n\nThe earth is no longer safe, so you must find a way for the survivors of the earth to reach the Star Gliese 581.\n\nOutsider, the humanity relies on you."
 
@@ -72,3 +74,11 @@ func set_cur_stage(stage):
 
 func get_cur_stage():
 	return cur_stage
+
+func set_score(value):
+	score = value
+	pass
+
+func get_score():
+	return score
+	

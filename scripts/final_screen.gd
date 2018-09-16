@@ -20,4 +20,4 @@ func _ready():
 
 
 func _on_new_game_pressed():	
-	get_tree().change_scene("res://scenes/main_screen.tscn")
+	get_tree().change_scene("res://scenes/resources_screen.tscn")
