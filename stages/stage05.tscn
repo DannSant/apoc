@@ -10,7 +10,7 @@
 [ext_resource path="res://characters/player/player.tscn" type="PackedScene" id=8]
 [ext_resource path="res://theme/default_theme.tres" type="Theme" id=9]
 
-[node name="stage05" type="Node2D"]
+[node name="stage05" type="Node2D" index="0"]
 
 position = Vector2( -6.89178, -6.17201 )
 script = ExtResource( 1 )
@@ -49,6 +49,7 @@ armor = 100
 
 stream = ExtResource( 6 )
 volume_db = 0.0
+pitch_scale = 1.0
 autoplay = true
 mix_target = 0
 bus = "Master"

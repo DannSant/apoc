@@ -31,6 +31,8 @@ _sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "M
 
 [node name="enemy_spawner" type="Node2D" parent="." index="2"]
 
+editor/display_folded = true
+
 [node name="spawner01" parent="enemy_spawner" index="0" instance=ExtResource( 4 )]
 
 wait_time = 2.0
@@ -47,6 +49,7 @@ background_spawn = false
 
 stream = ExtResource( 5 )
 volume_db = 0.0
+pitch_scale = 1.0
 autoplay = true
 mix_target = 0
 bus = "Master"

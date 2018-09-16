@@ -44,7 +44,8 @@ func _process(delta):
 	elif progress>=100 and boss_level:
 		#kill player
 		offset_step=0
-		if !wr.get_ref():
+		var boss_ref = weakref(boss)
+		if boss_ref.get_ref():
 			boss.enrage()
 		return
 		pass

@@ -8,6 +8,7 @@ var resources = 0
 var attack_attr = 1
 var armor_attr = 1
 var speed_attr= 1
+var score=0
 
 var attack_cost = 100
 var armor_cost = 300
@@ -33,6 +34,7 @@ onready var map5 = preload("res://ui/map_05.png")
 
 
 onready var resources_label = $resources_ui/controls_ui/resources_node/resources_label
+onready var score_label = $resources_ui/controls_ui/score_node/score_label
 onready var attack_label = $resources_ui/controls_ui/attack_node/attack_text
 onready var armor_label = $resources_ui/controls_ui/armor_node/armor_text
 onready var speed_label = $resources_ui/controls_ui/speed_node/speed_text
@@ -60,6 +62,7 @@ func _ready():
 	speed_cost_lbl.text = str(speed_cost)
 	
 	resources=player_globals.get_resources()
+	score=player_globals.get_score()
 	armor_attr=player_globals.get_shields()
 	attack_attr=player_globals.get_weapon_pu()
 	speed_attr=player_globals.get_hyper_velocity()
@@ -68,6 +71,7 @@ func _ready():
 	update_attack_attr_ui()
 	update_speed_attr_ui()
 	update_resources_ui()
+	update_score_ui()
 	var current_stage = player_globals.get_cur_stage()	
 	set_next_scene(current_stage)
 	set_stage_map(current_stage)
@@ -105,6 +109,9 @@ func get_resources():
 	
 func update_resources_ui():
 	resources_label.text = "Resources: " + str(resources)
+	
+func update_score_ui():
+	score_label.text = "Score: " + str(score)
 	
 func set_attack_attr(new_value):
 	attack_attr = new_value
@@ -209,16 +216,16 @@ func exit_to_title():
 
 func _on_lore_button_pressed():
 	if next_stage_number==1:
-		dialog_text.text = "Transmission incomig... \n\n" + player_globals.lore_text1
+		dialog_text.text = "Incomming transmission... \n\n" + player_globals.lore_text1
 		#dialog_text.add_text("Transmission incomig... \n\n" + player_globals.lore_text1)
 	if next_stage_number==2:
-		dialog_text.text = "Transmission incomig... \n\n" + player_globals.lore_text2
+		dialog_text.text = "Incomming transmission... \n\n" + player_globals.lore_text2
 	if next_stage_number==3:
-		dialog_text.text = "Transmission incomig... \n\n" + player_globals.lore_text3
+		dialog_text.text = "Incomming transmission... \n\n" + player_globals.lore_text3
 	if next_stage_number==4:
-		dialog_text.text = "Transmission incomig... \n\n" + player_globals.lore_text4
+		dialog_text.text = "Incomming transmission... \n\n" + player_globals.lore_text4
 	if next_stage_number==5:
-		dialog_text.text = "Transmission incomig... \n\n" + player_globals.lore_text5
+		dialog_text.text = "Incomming transmission... \n\n" + player_globals.lore_text5
 		
 	dialog_popup.visible=true
 	get_tree().paused=true

@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://scripts/resources_screen_handler.gd" type="Script" id=1]
 [ext_resource path="res://img/dyson_sphere_01.jpg" type="Texture" id=2]
@@ -6,25 +6,26 @@
 [ext_resource path="res://ui/label_bg.png" type="Texture" id=4]
 [ext_resource path="res://theme/default_theme.tres" type="Theme" id=5]
 [ext_resource path="res://ui/box_01.png" type="Texture" id=6]
-[ext_resource path="res://ui/weapon_01.png" type="Texture" id=7]
-[ext_resource path="res://scripts/resources_spender.gd" type="Script" id=8]
-[ext_resource path="res://fonts/Space_bold.otf" type="DynamicFontData" id=9]
-[ext_resource path="res://ui/shield_01.png" type="Texture" id=10]
-[ext_resource path="res://ui/velocime 01.png" type="Texture" id=11]
-[ext_resource path="res://shared/music/main screen.ogg" type="AudioStream" id=12]
-[ext_resource path="res://characters/enemies/spawner.tscn" type="PackedScene" id=13]
+[ext_resource path="res://ui/score_icon.png" type="Texture" id=7]
+[ext_resource path="res://ui/weapon_01.png" type="Texture" id=8]
+[ext_resource path="res://scripts/resources_spender.gd" type="Script" id=9]
+[ext_resource path="res://fonts/Space_bold.otf" type="DynamicFontData" id=10]
+[ext_resource path="res://ui/shield_01.png" type="Texture" id=11]
+[ext_resource path="res://ui/velocime 01.png" type="Texture" id=12]
+[ext_resource path="res://shared/music/main screen.ogg" type="AudioStream" id=13]
+[ext_resource path="res://characters/enemies/spawner.tscn" type="PackedScene" id=14]
 
-[sub_resource type="DynamicFont" id=6]
+[sub_resource type="DynamicFont" id=1]
 
 size = 30
 use_mipmaps = false
 use_filter = true
-font_data = ExtResource( 9 )
+font_data = ExtResource( 10 )
 _sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
 
-[sub_resource type="Theme" id=7]
+[sub_resource type="Theme" id=2]
 
-default_font = SubResource( 6 )
+default_font = SubResource( 1 )
 Label/colors/font_color = Color( 0, 0.902344, 0.183289, 1 )
 Label/colors/font_color_shadow = Color( 0, 0, 0, 0 )
 Label/constants/line_spacing = 3
@@ -35,36 +36,15 @@ Label/fonts/font = null
 Label/styles/normal = null
 _sections_unfolded = [ "Label", "Label/colors" ]
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=3]
 
 size = 15
 use_mipmaps = false
 use_filter = true
-font_data = ExtResource( 9 )
+font_data = ExtResource( 10 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[sub_resource type="Theme" id=2]
-
-default_font = SubResource( 1 )
-Label/colors/font_color = Color( 0.945313, 0.937927, 0.937927, 1 )
-Label/colors/font_color_shadow = Color( 0, 0, 0, 0 )
-Label/constants/line_spacing = 3
-Label/constants/shadow_as_outline = 0
-Label/constants/shadow_offset_x = 1
-Label/constants/shadow_offset_y = 1
-Label/fonts/font = null
-Label/styles/normal = null
-_sections_unfolded = [ "Label" ]
-
-[sub_resource type="DynamicFont" id=3]
-
-size = 20
-use_mipmaps = false
-use_filter = true
-font_data = ExtResource( 9 )
-_sections_unfolded = [ "Font", "Settings" ]
-
-[sub_resource type="Theme" id=4]
+[sub_resource type="Theme" id=8]
 
 default_font = SubResource( 3 )
 Label/colors/font_color = Color( 0.945313, 0.937927, 0.937927, 1 )
@@ -79,10 +59,31 @@ _sections_unfolded = [ "Label" ]
 
 [sub_resource type="DynamicFont" id=5]
 
+size = 20
+use_mipmaps = false
+use_filter = true
+font_data = ExtResource( 10 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="Theme" id=6]
+
+default_font = SubResource( 5 )
+Label/colors/font_color = Color( 0.945313, 0.937927, 0.937927, 1 )
+Label/colors/font_color_shadow = Color( 0, 0, 0, 0 )
+Label/constants/line_spacing = 3
+Label/constants/shadow_as_outline = 0
+Label/constants/shadow_offset_x = 1
+Label/constants/shadow_offset_y = 1
+Label/fonts/font = null
+Label/styles/normal = null
+_sections_unfolded = [ "Label" ]
+
+[sub_resource type="DynamicFont" id=7]
+
 size = 15
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 9 )
+font_data = ExtResource( 10 )
 _sections_unfolded = [ "Font", "Resource", "Settings" ]
 
 [node name="resources_screen" type="Node"]
@@ -129,8 +130,6 @@ _sections_unfolded = [ "Rect", "Visibility" ]
 
 [node name="resources_ui" type="Container" parent="." index="3"]
 
-editor/display_folded = true
-modulate = Color( 1, 1, 1, 0 )
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 1.0
@@ -164,9 +163,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 419.0
-margin_top = 49.0
+margin_top = 16.0
 margin_right = 746.0
-margin_bottom = 89.0
+margin_bottom = 56.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -174,6 +173,9 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 texture = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="resources_label" type="Label" parent="resources_ui/controls_ui/resources_node" index="0"]
 
@@ -218,8 +220,73 @@ texture = ExtResource( 6 )
 stretch_mode = 0
 _sections_unfolded = [ "Rect" ]
 
-[node name="attack_node" type="NinePatchRect" parent="resources_ui/controls_ui" index="1"]
+[node name="score_node" type="NinePatchRect" parent="resources_ui/controls_ui" index="1"]
 
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 424.0
+margin_top = 64.0
+margin_right = 751.0
+margin_bottom = 104.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="score_label" type="Label" parent="resources_ui/controls_ui/score_node" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = 7.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+theme = ExtResource( 5 )
+text = "Score: 50"
+align = 2
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Theme" ]
+
+[node name="score_icon" type="TextureRect" parent="resources_ui/controls_ui/score_node" index="1"]
+
+anchor_left = 0.0
+anchor_top = 1.0
+anchor_right = 0.0
+anchor_bottom = 1.0
+margin_left = -7.0
+margin_top = -46.0
+margin_right = 105.0
+margin_bottom = 64.0
+rect_scale = Vector2( 0.5, 0.5 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 7 )
+stretch_mode = 0
+_sections_unfolded = [ "Rect" ]
+
+[node name="attack_node" type="NinePatchRect" parent="resources_ui/controls_ui" index="2"]
+
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -278,7 +345,7 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 stretch_mode = 0
 _sections_unfolded = [ "Rect" ]
 
@@ -307,7 +374,7 @@ group = null
 text = "-"
 flat = false
 align = 1
-script = ExtResource( 8 )
+script = ExtResource( 9 )
 _sections_unfolded = [ "Rect", "Theme" ]
 
 [node name="attack_plus" type="Button" parent="resources_ui/controls_ui/attack_node" index="3"]
@@ -327,7 +394,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-theme = SubResource( 7 )
+theme = SubResource( 2 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -335,7 +402,7 @@ group = null
 text = "+"
 flat = false
 align = 1
-script = ExtResource( 8 )
+script = ExtResource( 9 )
 _sections_unfolded = [ "Rect", "Theme" ]
 
 [node name="attack_text" type="Label" parent="resources_ui/controls_ui/attack_node" index="4"]
@@ -361,7 +428,7 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Theme" ]
 
-[node name="armor_node" type="NinePatchRect" parent="resources_ui/controls_ui" index="2"]
+[node name="armor_node" type="NinePatchRect" parent="resources_ui/controls_ui" index="3"]
 
 editor/display_folded = true
 anchor_left = 0.0
@@ -422,7 +489,7 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 stretch_mode = 0
 _sections_unfolded = [ "Rect" ]
 
@@ -451,7 +518,7 @@ group = null
 text = "-"
 flat = false
 align = 1
-script = ExtResource( 8 )
+script = ExtResource( 9 )
 _sections_unfolded = [ "Rect", "Theme" ]
 
 [node name="armor_plus" type="Button" parent="resources_ui/controls_ui/armor_node" index="3"]
@@ -479,7 +546,7 @@ group = null
 text = "+"
 flat = false
 align = 1
-script = ExtResource( 8 )
+script = ExtResource( 9 )
 _sections_unfolded = [ "Rect", "Theme" ]
 
 [node name="armor_text" type="Label" parent="resources_ui/controls_ui/armor_node" index="4"]
@@ -505,7 +572,7 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Theme" ]
 
-[node name="speed_node" type="NinePatchRect" parent="resources_ui/controls_ui" index="3"]
+[node name="speed_node" type="NinePatchRect" parent="resources_ui/controls_ui" index="4"]
 
 editor/display_folded = true
 anchor_left = 0.0
@@ -566,7 +633,7 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 stretch_mode = 0
 _sections_unfolded = [ "Rect" ]
 
@@ -595,7 +662,7 @@ group = null
 text = "-"
 flat = false
 align = 1
-script = ExtResource( 8 )
+script = ExtResource( 9 )
 _sections_unfolded = [ "Rect", "Theme" ]
 
 [node name="speed_plus" type="Button" parent="resources_ui/controls_ui/speed_node" index="3"]
@@ -623,7 +690,7 @@ group = null
 text = "+"
 flat = false
 align = 1
-script = ExtResource( 8 )
+script = ExtResource( 9 )
 _sections_unfolded = [ "Rect", "Theme" ]
 
 [node name="speed_text" type="Label" parent="resources_ui/controls_ui/speed_node" index="4"]
@@ -649,7 +716,7 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Theme" ]
 
-[node name="next_stage_btn" type="Button" parent="resources_ui/controls_ui" index="4"]
+[node name="next_stage_btn" type="Button" parent="resources_ui/controls_ui" index="5"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -674,10 +741,10 @@ group = null
 text = "Next Stage"
 flat = false
 align = 1
-script = ExtResource( 8 )
+script = ExtResource( 9 )
 _sections_unfolded = [ "Theme" ]
 
-[node name="exit_btn" type="Button" parent="resources_ui/controls_ui" index="5"]
+[node name="exit_btn" type="Button" parent="resources_ui/controls_ui" index="6"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -702,10 +769,10 @@ group = null
 text = "Exit"
 flat = false
 align = 1
-script = ExtResource( 8 )
+script = ExtResource( 9 )
 _sections_unfolded = [ "Theme" ]
 
-[node name="attack_cost" type="Label" parent="resources_ui/controls_ui" index="6"]
+[node name="attack_cost" type="Label" parent="resources_ui/controls_ui" index="7"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -728,7 +795,7 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Theme" ]
 
-[node name="armor_cost" type="Label" parent="resources_ui/controls_ui" index="7"]
+[node name="armor_cost" type="Label" parent="resources_ui/controls_ui" index="8"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -751,7 +818,7 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Theme" ]
 
-[node name="speed_cost" type="Label" parent="resources_ui/controls_ui" index="8"]
+[node name="speed_cost" type="Label" parent="resources_ui/controls_ui" index="9"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -774,7 +841,7 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Theme" ]
 
-[node name="speed_cost2" type="Label" parent="resources_ui/controls_ui" index="9"]
+[node name="speed_cost2" type="Label" parent="resources_ui/controls_ui" index="10"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -814,7 +881,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-theme = SubResource( 2 )
+theme = SubResource( 8 )
 popup_exclusive = false
 window_title = "Ooops!"
 resizable = false
@@ -839,12 +906,12 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-theme = SubResource( 4 )
+theme = SubResource( 6 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-text = "Transmission Incoming.."
+text = "Incomming transmission..."
 flat = false
 align = 1
 _sections_unfolded = [ "Theme" ]
@@ -866,7 +933,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-theme = SubResource( 4 )
+theme = SubResource( 6 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -878,7 +945,7 @@ _sections_unfolded = [ "Theme" ]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="4"]
 
-stream = ExtResource( 12 )
+stream = ExtResource( 13 )
 volume_db = 0.0
 pitch_scale = 1.0
 autoplay = true
@@ -938,7 +1005,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/normal_font = SubResource( 5 )
+custom_fonts/normal_font = SubResource( 7 )
 bbcode_enabled = false
 bbcode_text = "Transmission incoming..."
 visible_characters = -1
@@ -980,7 +1047,7 @@ flat = false
 align = 1
 _sections_unfolded = [ "Rect", "Theme", "Visibility" ]
 
-[node name="spawner" parent="." index="6" instance=ExtResource( 13 )]
+[node name="spawner" parent="." index="6" instance=ExtResource( 14 )]
 
 modulate = Color( 1, 1, 1, 0.751373 )
 z_index = -1
@@ -991,7 +1058,7 @@ enemy_type = 4
 spawn_origin = "E"
 background_spawn = true
 
-[node name="spawner2" parent="." index="7" instance=ExtResource( 13 )]
+[node name="spawner2" parent="." index="7" instance=ExtResource( 14 )]
 
 modulate = Color( 1, 1, 1, 0.751373 )
 z_index = -1

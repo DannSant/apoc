@@ -18,6 +18,8 @@ onready var high_score_btn = $Pause/btn_highscore
 onready var high_score_name = $HighScore/txt_name
 onready var high_score_label = $HighScore/lbl_score_number
 
+onready var hud = get_node("../hud")
+
 
 
 
@@ -73,7 +75,7 @@ func _on_btn_pause_lore_back_pressed():
 func _on_btn_highscore_pressed():
 	$Pause.visible=false
 	$HighScore.visible=true
-	high_score_label.text = str(player_globals.get_resources())
+	high_score_label.text = str(hud.get_score())
 
 
 func _on_btn_back_hs_pressed():
@@ -83,7 +85,7 @@ func _on_btn_back_hs_pressed():
 
 func _on_btn_save_hs_pressed():
 	var name = high_score_name.text
-	var score = player_globals.get_resources()
+	var score = hud.get_score()
 	if name == '' or name ==null:
 		return
 	var url = "https://apocscores.herokuapp.com/score"
