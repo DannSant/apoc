@@ -9,7 +9,6 @@ can_damage_enemy = true
 velocity = Vector2( -50, 0 )
 armor = 5
 resources_value = 100
-shoot_player = false
 base_rotation_speed = 0.2
 
 [node name="Area2D" parent="." index="0"]
@@ -21,6 +20,18 @@ _sections_unfolded = [ "Audio Bus", "Collision", "Material", "Transform", "Visib
 position = Vector2( -10, -0.275116 )
 scale = Vector2( 1.2, 1.2 )
 texture = ExtResource( 2 )
+
+[node name="thruster" parent="." index="1"]
+
+visible = false
+
+[node name="thruster2" parent="." index="2"]
+
+visible = false
+
+[node name="thruster3" parent="." index="3"]
+
+visible = false
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]
 

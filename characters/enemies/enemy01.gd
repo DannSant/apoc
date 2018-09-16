@@ -71,6 +71,7 @@ func take_damage(damage):
 #		get_parent().get_parent().get_node("hud").add_resources(resources_value)
 		if damage < 99:
 			get_node("../../../../hud").add_resources(resources_value)
+			get_node("../../../../hud").add_score(resources_value)
 
 		do_explotion()
 		queue_free()

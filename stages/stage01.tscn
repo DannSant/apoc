@@ -35,11 +35,13 @@ _sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "M
 
 wait_time = 2.0
 enemy_type = 1
+background_spawn = false
 
 [node name="spawner02" parent="enemy_spawner" index="1" instance=ExtResource( 4 )]
 
 wait_time = 2.0
 enemy_type = 2
+background_spawn = false
 
 [node name="music" type="AudioStreamPlayer" parent="." index="3"]
 

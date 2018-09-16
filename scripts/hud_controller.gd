@@ -44,12 +44,12 @@ func get_score():
 
 func add_resources(newResources):
 	self.resources+=newResources	
-	label.text =str(resources)
+	label.text =str(self.resources)
 	pass
 	
 func add_score(new_score):
 	self.score+=new_score	
-	score_label.text =str(new_score)
+	score_label.text =str(self.score)
 	pass
 	
 func add_progress(newValue):

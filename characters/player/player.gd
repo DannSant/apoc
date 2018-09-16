@@ -35,19 +35,20 @@ func _ready():
 func init_attributes():
 	armor = max_armor
 	
-	get_parent().get_node("hud").set_resources(player_globals.get_resources())
+	get_parent().get_node("hud").set_score(player_globals.get_score())
 	get_parent().get_node("hud").set_shields(player_globals.get_shields())
 	get_parent().get_node("hud").set_weapon_pu(player_globals.get_weapon_pu())
 	get_parent().get_node("hud").set_hyper_velocity(player_globals.get_hyper_velocity())
+	get_parent().get_node("hud").set_resources(player_globals.get_resources())
 
 	pass
 	
 func update_attributes():
-	
 	player_globals.set_resources(get_parent().get_node("hud").get_resources())
 	player_globals.set_shields(get_parent().get_node("hud").get_shields())
 	player_globals.set_weapon_pu(get_parent().get_node("hud").get_weapon_pu())
 	player_globals.set_hyper_velocity(get_parent().get_node("hud").get_hyper_velocity())
+	player_globals.set_score(get_parent().get_node("hud").get_score())
 	
 	pass
 	

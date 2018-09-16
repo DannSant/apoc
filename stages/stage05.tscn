@@ -10,7 +10,7 @@
 [ext_resource path="res://characters/player/player.tscn" type="PackedScene" id=8]
 [ext_resource path="res://theme/default_theme.tres" type="Theme" id=9]
 
-[node name="stage05" type="Node2D" index="0"]
+[node name="stage05" type="Node2D"]
 
 position = Vector2( -6.89178, -6.17201 )
 script = ExtResource( 1 )
@@ -37,6 +37,7 @@ _sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "M
 
 wait_time = 15.0
 enemy_type = 4
+background_spawn = false
 
 [node name="enemy_boss" parent="." index="3" instance=ExtResource( 5 )]
 
@@ -60,7 +61,7 @@ stage_number = 5
 
 position = Vector2( 175.084, 263.397 )
 ship_speed = 0
-max_armor = 5
+max_armor = 1000
 
 [node name="Tween" type="Tween" parent="." index="7"]
 
