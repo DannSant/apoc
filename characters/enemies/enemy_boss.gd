@@ -7,7 +7,7 @@ export var resources_value = 0
 export var follow_player = false
 export var follow_speed=0.002
 
-const ACTION_MARGIN_X = 80
+const ACTION_MARGIN_X = 160
 const ACTION_MARGIN_Y = 60
 
 onready var explosion = preload("res://shared/effects/explosion.tscn")
@@ -29,9 +29,6 @@ func _process(delta):
 	position.y = clamp(position.y, 0+ACTION_MARGIN_Y, view_size.size.y - ACTION_MARGIN_Y)
 	
 	set_position(position)
-		
-	if get_position().y+40 < 0 || get_position().y-40 > get_viewport_rect().size.y || get_position().x + 300 < 0:
-		queue_free()
 	
 	pass
 	
@@ -40,11 +37,16 @@ func take_damage(damage):
 	do_explotion()
 	if armor <= 0:
 		#print(get_node("../../../../hud").name)
-#		get_parent().get_parent().get_node("hud").add_resources(resources_value)
+		get_parent().get_node("hud").add_resources(resources_value)
+		get_parent().get_node("hud").add_score(resources_value)
 		#get_node("../../../../hud").add_resources(resources_value)
 
 		do_explotion()
 		queue_free()
+	
+	var bg_offset_step = get_parent().get_node("bg").get_offset_step()
+	if (bg_offset_step <=0):
+		enrage()
 	
 	pass
 	

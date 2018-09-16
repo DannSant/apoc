@@ -31,33 +31,50 @@ func _ready():
 
 func _process(delta):
 	offset = offset + offset_step * delta
+	
+#	print ("offset_step" + str(offset_step) +  ". offset: " + str(offset),". level_width: " + str(level_width))
+#	if (offset < level_width+(offset_step*2)):
+	get_node("ParallaxBackground").set_scroll_offset(Vector2(-offset,0))
+	
 	var wr = weakref(boss);
 	var progress = (offset/level_width)*100
+
 	#print(progress)
 	get_parent().get_node("hud").add_progress(progress)
+	
 	if progress>=100 and !boss_level:
 		offset_step=0
 		if !game_finished:
 			game_finished=true
 			get_parent().get_node("player").warp(current_stage)
 		return
-	elif progress>=100 and boss_level:
-		#kill player
-		offset_step=0
-		if !wr.get_ref():
-			boss.enrage()
-		return
-		pass
-	elif progress<100 and boss_level and !wr.get_ref():		
-		offset_step=0
-		if !game_finished:
-			game_finished=true
-			get_parent().get_node("player").warp(current_stage)
-		return
 	
+	if boss_level:
+		if progress>=100:
+			offset_step=0
 		
-	get_node("ParallaxBackground").set_scroll_offset(Vector2(-offset,0))
-	
+		if str(boss) == "[Deleted Object]":
+			if !game_finished:
+				game_finished=true
+				get_parent().get_node("player").warp(current_stage)
+				
+		return
+
+#	if progress>=100 and boss_level:
+#		offset_step=0
+#		if str(boss) != "[Deleted Object]":
+#			boss.enrage()
+#		else:
+#			game_finished=true
+#			get_parent().get_node("player").warp(current_stage)
+#		return
+		
+#	if progress<100 and boss_level and !wr.get_ref():		
+#		offset_step=0
+#		if !game_finished:
+#			game_finished=true
+#			get_parent().get_node("player").warp(current_stage)
+		
 	pass
 	
 func shake():

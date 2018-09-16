@@ -12,7 +12,7 @@
 [ext_resource path="res://scripts/shoot_btn.gd" type="Script" id=10]
 [ext_resource path="res://scenes/ui/ScoreCounter.tscn" type="PackedScene" id=11]
 
-[node name="hud" type="Control" index="0"]
+[node name="hud" type="Control"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -51,7 +51,6 @@ _sections_unfolded = [ "Patch Margin", "Rect" ]
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." index="3"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 1.0
 anchor_right = 0.0

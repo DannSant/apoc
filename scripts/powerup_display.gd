@@ -1,9 +1,21 @@
 extends NinePatchRect
 
 func _ready():
+	set_process(true)
 	pass
 
 func _process(delta):
+	check_key_pressed()
+	pass
+
+func check_key_pressed():
+	if Input.is_key_pressed(KEY_A):
+		_on_p1_pressed()
+	elif Input.is_key_pressed(KEY_S):
+		_on_p2_pressed()
+	elif Input.is_key_pressed(KEY_D):
+		_on_p3_pressed()
+		
 	pass
 
 func set_p1(value):

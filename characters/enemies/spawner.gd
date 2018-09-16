@@ -18,9 +18,14 @@ var enemy_active
 var is_enemy_active = false
 
 func _ready():
+	var spwan_latency = wait_time
+	
 	randomize()
 	
-	get_node("latency").set_wait_time(wait_time)
+	if game_globals.get_dificulty() > 0:
+		spwan_latency = wait_time/game_globals.get_dificulty()
+	
+	get_node("latency").set_wait_time(spwan_latency)
 	set_process(true)
 	pass
 

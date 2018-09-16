@@ -73,7 +73,7 @@ Label/fonts/font = null
 Label/styles/normal = null
 _sections_unfolded = [ "Label" ]
 
-[node name="powerup_display" type="NinePatchRect" index="0"]
+[node name="powerup_display" type="NinePatchRect"]
 
 anchor_left = 0.0
 anchor_top = 0.0

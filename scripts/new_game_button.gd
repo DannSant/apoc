@@ -14,6 +14,7 @@ func _gui_input(event):
 	if event is InputEventMouseButton and event.button_index == BUTTON_LEFT and event.pressed:
 		if self.name=="new_game":
 #			print("new")
+			game_globals.reset_attributes()
 			player_globals.reset_attributes()
 			player_globals.set_cur_stage(0)
 			get_tree().change_scene("res://scenes/resources_screen.tscn")

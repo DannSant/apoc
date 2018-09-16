@@ -1,7 +1,7 @@
 extends Node
 
 var default_resources = 0
-var default_shields = 20
+var default_shields = 4
 var default_weapon_pu = 4
 var default_hyper_velocity = 4
 
@@ -33,7 +33,9 @@ func _ready():
 	pass
 
 func reset_attributes():
-	resources = default_resources
+	randomize()
+	
+	resources = default_resources+ceil(rand_range(200,600))
 	shields = default_shields
 	weapon_pu = default_weapon_pu
 	hyper_velocity = default_hyper_velocity

@@ -11,7 +11,7 @@
 custom_solver_bias = 0.0
 radius = 89.1747
 
-[node name="enemy_boss" type="Node2D" index="0"]
+[node name="enemy_boss" type="Node2D"]
 
 position = Vector2( 29.0001, 242.001 )
 scale = Vector2( 0.3, 0.3 )
