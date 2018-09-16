@@ -7,10 +7,7 @@ path="res://.import/explosion3.png-11e9196a44e303eec2ff5b5096b5ef17.stex"
 [deps]
 
 source_file="res://shared/effects/explosion3.png"
-source_md5="e3eb389b5470d20ad51003ebb54495f5"
-
 dest_files=[ "res://.import/explosion3.png-11e9196a44e303eec2ff5b5096b5ef17.stex" ]
-dest_md5="3dee734228b25bf2ca6626d440a64433"
 
 [params]
 

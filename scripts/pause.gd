@@ -14,6 +14,11 @@ onready var pause_exit = $Pause/btn_pause_exit
 onready var lore_text = $Pause/lore_text
 onready var game_over_label = $Pause/game_over_label
 
+onready var high_score_btn = $Pause/btn_highscore
+onready var high_score_name = $HighScore/txt_name
+onready var high_score_label = $HighScore/lbl_score_number
+
+
 
 
 func _ready():
@@ -45,6 +50,7 @@ func game_over():
 	pause_back.visible = false
 	game_over_label.visible=true
 	pause_lore.visible=false
+	high_score_btn.visible=true
 
 
 func _on_btn_pause_lore_pressed():
@@ -62,3 +68,30 @@ func _on_btn_pause_lore_back_pressed():
 	pause_exit.visible = true
 	pause_lore_back.visible=false
 	lore_text.visible=false
+
+
+func _on_btn_highscore_pressed():
+	$Pause.visible=false
+	$HighScore.visible=true
+	high_score_label.text = str(player_globals.get_resources())
+
+
+func _on_btn_back_hs_pressed():
+	$Pause.visible=true
+	$HighScore.visible=false
+
+
+func _on_btn_save_hs_pressed():
+	var name = high_score_name.text
+	var score = player_globals.get_resources()
+	if name == '' or name ==null:
+		return
+	var url = "https://apocscores.herokuapp.com/score"
+	var query = JSON.print({"name":name,"score":score})
+	var headers = ["Content-Type: application/json"]
+	$HTTPRequest.request(url, headers, false, HTTPClient.METHOD_POST, query)
+
+
+func _on_HTTPRequest_request_completed(result, response_code, headers, body):
+	$Pause.visible=true
+	$HighScore.visible=false
