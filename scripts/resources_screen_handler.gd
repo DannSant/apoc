@@ -71,11 +71,8 @@ func _ready():
 	update_attack_attr_ui()
 	update_speed_attr_ui()
 	update_resources_ui()
-<<<<<<< HEAD
-	
-=======
 	update_score_ui()
->>>>>>> 135fc348d82326535380bbe21599d030b38e34b3
+	
 	var current_stage = player_globals.get_cur_stage()	
 	
 	if current_stage == 0:
@@ -83,10 +80,9 @@ func _ready():
 	
 	set_next_scene(current_stage)
 	set_stage_map(current_stage)
-	
 	if next_stage_number<=5:
 		_on_lore_button_pressed()
-	
+		
 	print ("Current Stage: ", player_globals.get_cur_stage())
 	print ("Dificulty: ", game_globals.get_dificulty())
 	pass

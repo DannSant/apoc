@@ -44,11 +44,7 @@ use_filter = true
 font_data = ExtResource( 10 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-<<<<<<< HEAD
-[sub_resource type="Theme" id=4]
-=======
 [sub_resource type="Theme" id=8]
->>>>>>> 135fc348d82326535380bbe21599d030b38e34b3
 
 default_font = SubResource( 3 )
 Label/colors/font_color = Color( 0.945313, 0.937927, 0.937927, 1 )
@@ -90,7 +86,7 @@ use_filter = false
 font_data = ExtResource( 10 )
 _sections_unfolded = [ "Font", "Resource", "Settings" ]
 
-[node name="resources_screen" type="Node" index="0"]
+[node name="resources_screen" type="Node"]
 
 script = ExtResource( 1 )
 
@@ -885,11 +881,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-<<<<<<< HEAD
-theme = SubResource( 4 )
-=======
 theme = SubResource( 8 )
->>>>>>> 135fc348d82326535380bbe21599d030b38e34b3
 popup_exclusive = false
 window_title = "Ooops!"
 resizable = false
@@ -955,6 +947,7 @@ _sections_unfolded = [ "Theme" ]
 
 stream = ExtResource( 13 )
 volume_db = 0.0
+pitch_scale = 1.0
 autoplay = true
 mix_target = 0
 bus = "Master"
@@ -1060,7 +1053,7 @@ modulate = Color( 1, 1, 1, 0.751373 )
 z_index = -1
 _sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 velocity = Vector2( -100, 0 )
-wait_time = 2.5
+wait_time = 3.0
 enemy_type = 4
 spawn_origin = "E"
 background_spawn = true
@@ -1070,8 +1063,8 @@ background_spawn = true
 modulate = Color( 1, 1, 1, 0.751373 )
 z_index = -1
 _sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
-velocity = Vector2( 10, 100 )
-wait_time = 3.5
+velocity = Vector2( 0, 100 )
+wait_time = 4.0
 enemy_type = 21
 spawn_origin = "N"
 background_spawn = true

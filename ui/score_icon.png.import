@@ -7,7 +7,10 @@ path="res://.import/score_icon.png-bfed829e8ee3dcc0df218503fd44b20f.stex"
 [deps]
 
 source_file="res://ui/score_icon.png"
+source_md5="624659546cfc7307e70f95c33fee8ebc"
+
 dest_files=[ "res://.import/score_icon.png-bfed829e8ee3dcc0df218503fd44b20f.stex" ]
+dest_md5="5510075144071ed2297987a47a63c4f2"
 
 [params]
 
