@@ -19,7 +19,7 @@ func _gui_input(event):
 			player_globals.set_cur_stage(0)
 			get_tree().change_scene("res://scenes/resources_screen.tscn")
 		elif self.name=="exit":
-			get_tree().quit()
+			get_tree().change_scene("res://scenes/highscore_screen.tscn")
 #			print("exit")
 			
 

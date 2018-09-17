@@ -48,6 +48,23 @@ func _process(delta):
 			game_finished=true
 			get_parent().get_node("player").warp(current_stage)
 		return
+<<<<<<< HEAD
+=======
+	elif progress>=100 and boss_level:
+		#kill player
+		offset_step=0
+		var boss_ref = weakref(boss)
+		if boss_ref.get_ref():
+			boss.enrage()
+		return
+		pass
+	elif progress<100 and boss_level and !wr.get_ref():		
+		offset_step=0
+		if !game_finished:
+			game_finished=true
+			get_parent().get_node("player").warp(current_stage)
+		return
+>>>>>>> 135fc348d82326535380bbe21599d030b38e34b3
 	
 	if boss_level:
 		if progress>=100:
