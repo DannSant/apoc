@@ -75,9 +75,6 @@ func _ready():
 	
 	var current_stage = player_globals.get_cur_stage()	
 	
-	if current_stage == 0:
-		game_globals.increase_dificulty()
-	
 	set_next_scene(current_stage)
 	set_stage_map(current_stage)
 	if next_stage_number<=5:
@@ -90,6 +87,7 @@ func _ready():
 func set_next_scene(current_stage):
 	next_stage_number = current_stage + 1
 	if next_stage_number>5:
+		game_globals.increase_dificulty()
 		player_globals.set_cur_stage(0)
 		get_tree().change_scene("res://scenes/final_screen.tscn")
 	else:

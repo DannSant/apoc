@@ -18,4 +18,4 @@ func increase_dificulty():
 	dificulty = dificulty + dificulty_factor
 	
 func reset_attributes():
-	dificulty = default_dificulty
+	dificulty = default_dificulty + dificulty_factor
