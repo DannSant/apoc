@@ -133,7 +133,7 @@ func do_explotion():
 	get_parent().add_child(new_explosion)
 
 func activate_shield():
-	if get_node("shield_deactivate").time_left > 0:
+	if get_node("shield_deactivate").time_left > 0 || level_finished:
 		return false
 	
 	shield_activated = true
@@ -147,7 +147,7 @@ func _on_shield_deactivate_timeout():
 	pass
 
 func activate_weapon_pu():
-	if get_node("weapon_pu_deactivate").time_left > 0:
+	if get_node("weapon_pu_deactivate").time_left > 0 || level_finished:
 		return false
 		
 	get_node("weapon_shoot").stop()
@@ -163,7 +163,7 @@ func _on_weapon_pu_deactivate_timeout():
 	pass 
 
 func activate_hyper_velocity():
-	if get_node("hyper_velocity_deactivate").time_left > 0:
+	if get_node("hyper_velocity_deactivate").time_left > 0 || level_finished:
 		return false
 	
 	bk_bg_offset_step = get_parent().get_node("bg").get_offset_step()
