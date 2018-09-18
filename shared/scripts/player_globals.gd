@@ -39,6 +39,7 @@ func reset_attributes():
 	shields = default_shields
 	weapon_pu = default_weapon_pu
 	hyper_velocity = default_hyper_velocity
+	score = 0
 	pass
 	
 
