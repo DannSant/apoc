@@ -13,7 +13,7 @@ use_filter = false
 font_data = ExtResource( 4 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="pause_layer" type="CanvasLayer"]
+[node name="pause_layer" type="CanvasLayer" index="0"]
 
 layer = 100
 offset = Vector2( 0, 0 )
@@ -26,7 +26,6 @@ stage_number = 0
 [node name="Pause" type="Control" parent="." index="0"]
 
 pause_mode = 2
-editor/display_folded = true
 visible = false
 anchor_left = 0.0
 anchor_top = 0.0
