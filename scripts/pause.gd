@@ -81,6 +81,7 @@ func _on_btn_highscore_pressed():
 func _on_btn_back_hs_pressed():
 	$Pause.visible=true
 	$HighScore.visible=false
+	high_score_name.text=""
 
 
 func _on_btn_save_hs_pressed():

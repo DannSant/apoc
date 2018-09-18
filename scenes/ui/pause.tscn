@@ -13,7 +13,7 @@ use_filter = false
 font_data = ExtResource( 4 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="pause_layer" type="CanvasLayer" index="0"]
+[node name="pause_layer" type="CanvasLayer"]
 
 layer = 100
 offset = Vector2( 0, 0 )
@@ -421,7 +421,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 theme = ExtResource( 2 )
-text = "Dann"
+text = ""
 readonly = false
 highlight_current_line = false
 syntax_highlighting = false
