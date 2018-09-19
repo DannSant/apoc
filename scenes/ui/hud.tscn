@@ -12,7 +12,7 @@
 [ext_resource path="res://scripts/shoot_btn.gd" type="Script" id=10]
 [ext_resource path="res://scenes/ui/ScoreCounter.tscn" type="PackedScene" id=11]
 
-[node name="hud" type="Control"]
+[node name="hud" type="Control" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -88,7 +88,7 @@ margin_bottom = -9.0
 
 [node name="PauseMenu" type="TouchScreenButton" parent="." index="5"]
 
-position = Vector2( 500, 2.0359 )
+position = Vector2( 465, 2.0359 )
 scale = Vector2( 0.5, 0.5 )
 normal = ExtResource( 7 )
 pressed = null
@@ -121,8 +121,10 @@ _sections_unfolded = [ "Rect", "Transform" ]
 
 [node name="ScoreCounter" parent="." index="7" instance=ExtResource( 11 )]
 
-margin_left = 565.0
-margin_right = 682.0
+margin_left = 529.0
+margin_top = 1.0
+margin_right = 673.0
+margin_bottom = 49.0
 _sections_unfolded = [ "Patch Margin", "Rect" ]
 
 [connection signal="pressed" from="PauseMenu" to="PauseMenu" method="_on_PauseMenu_pressed"]

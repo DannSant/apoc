@@ -25,7 +25,7 @@ onready var hud = get_node("../hud")
 
 func _ready():
 	lore_text.text = get_lore_text()
-	$Pause/game_over_label.text = $Pause/game_over_label.text + " " + str(game_globals.get_dificulty())
+	#$Pause/game_over_label.text = $Pause/game_over_label.text + " " + str(game_globals.get_dificulty())
 	pass
 	
 func get_lore_text():

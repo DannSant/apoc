@@ -1,25 +1,73 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://scripts/final_screen.gd" type="Script" id=1]
 [ext_resource path="res://img/dyson_sphere_01.jpg" type="Texture" id=2]
-[ext_resource path="res://fonts/INVASION2000.TTF" type="DynamicFontData" id=3]
-[ext_resource path="res://shared/music/main screen.ogg" type="AudioStream" id=4]
+[ext_resource path="res://fonts/Space_bold.otf" type="DynamicFontData" id=3]
+[ext_resource path="res://theme/default_theme.tres" type="Theme" id=4]
+[ext_resource path="res://shared/music/main screen.ogg" type="AudioStream" id=5]
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=5]
 
 size = 60
 use_mipmaps = false
-use_filter = false
-font_data = ExtResource( 3 )
-_sections_unfolded = [ "Font" ]
-
-[sub_resource type="DynamicFont" id=2]
-
-size = 40
-use_mipmaps = false
-use_filter = false
+use_filter = true
 font_data = ExtResource( 3 )
 _sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="Theme" id=6]
+
+default_font = SubResource( 5 )
+Label/colors/font_color = Color( 0.945313, 0.937927, 0.937927, 1 )
+Label/colors/font_color_shadow = Color( 0, 0, 0, 0 )
+Label/constants/line_spacing = 3
+Label/constants/shadow_as_outline = 0
+Label/constants/shadow_offset_x = 1
+Label/constants/shadow_offset_y = 1
+Label/fonts/font = null
+Label/styles/normal = null
+_sections_unfolded = [ "Label" ]
+
+[sub_resource type="DynamicFont" id=7]
+
+size = 60
+use_mipmaps = false
+use_filter = true
+font_data = ExtResource( 3 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="Theme" id=8]
+
+default_font = SubResource( 7 )
+Label/colors/font_color = Color( 0.945313, 0.937927, 0.937927, 1 )
+Label/colors/font_color_shadow = Color( 0, 0, 0, 0 )
+Label/constants/line_spacing = 3
+Label/constants/shadow_as_outline = 0
+Label/constants/shadow_offset_x = 1
+Label/constants/shadow_offset_y = 1
+Label/fonts/font = null
+Label/styles/normal = null
+_sections_unfolded = [ "Label" ]
+
+[sub_resource type="DynamicFont" id=3]
+
+size = 15
+use_mipmaps = false
+use_filter = true
+font_data = ExtResource( 3 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="Theme" id=4]
+
+default_font = SubResource( 3 )
+Label/colors/font_color = Color( 0.945313, 0.937927, 0.937927, 1 )
+Label/colors/font_color_shadow = Color( 0, 0, 0, 0 )
+Label/constants/line_spacing = 3
+Label/constants/shadow_as_outline = 0
+Label/constants/shadow_offset_x = 1
+Label/constants/shadow_offset_y = 1
+Label/fonts/font = null
+Label/styles/normal = null
+_sections_unfolded = [ "Label" ]
 
 [node name="final_screen" type="Node"]
 
@@ -50,28 +98,28 @@ size_flags_vertical = 1
 
 [node name="title" type="Label" parent="ui" index="0"]
 
-anchor_left = 0.0
+anchor_left = 0.5
 anchor_top = 0.0
-anchor_right = 0.0
+anchor_right = 0.5
 anchor_bottom = 0.0
-margin_left = 71.0
-margin_top = -4.0
-margin_right = 829.0
-margin_bottom = 59.0
+margin_left = -127.5
+margin_top = -22.0
+margin_right = 630.5
+margin_bottom = 71.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 1 )
+theme = SubResource( 6 )
 custom_colors/font_color = Color( 0.957031, 0.00747681, 0.029732, 1 )
 text = "Congratulations!"
 align = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-_sections_unfolded = [ "custom_colors", "custom_constants", "custom_fonts", "custom_styles" ]
+_sections_unfolded = [ "Theme", "custom_colors", "custom_constants", "custom_fonts", "custom_styles" ]
 
 [node name="title2" type="Label" parent="ui" index="1"]
 
@@ -79,17 +127,17 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = -105.0
-margin_top = 74.0
-margin_right = 1026.0
-margin_bottom = 199.0
+margin_left = -168.0
+margin_top = 39.0
+margin_right = 963.0
+margin_bottom = 228.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 1 )
+theme = SubResource( 8 )
 custom_colors/font_color = Color( 0.957031, 0.00747681, 0.029732, 1 )
 text = "Keep playing to get
 a high score"
@@ -97,7 +145,7 @@ align = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-_sections_unfolded = [ "custom_colors", "custom_constants", "custom_fonts", "custom_styles" ]
+_sections_unfolded = [ "Theme", "custom_colors", "custom_constants", "custom_fonts", "custom_styles" ]
 
 [node name="new_game" type="Button" parent="ui" index="2"]
 
@@ -105,10 +153,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 278.0
-margin_top = 390.0
-margin_right = 523.0
-margin_bottom = 437.0
+margin_left = 272.0
+margin_top = 419.0
+margin_right = 517.0
+margin_bottom = 472.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -116,7 +164,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 2 )
+theme = ExtResource( 4 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -124,7 +172,7 @@ group = null
 text = "Continue"
 flat = false
 align = 1
-_sections_unfolded = [ "Rect", "custom_fonts" ]
+_sections_unfolded = [ "Rect", "Theme", "custom_fonts" ]
 
 [node name="ColorRect" type="ColorRect" parent="ui" index="3"]
 
@@ -136,7 +184,7 @@ anchor_bottom = 0.0
 margin_left = 140.0
 margin_top = 212.0
 margin_right = 711.0
-margin_bottom = 380.0
+margin_bottom = 412.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -155,37 +203,40 @@ anchor_bottom = 0.0
 margin_left = 2.0
 margin_top = 3.0
 margin_right = 561.0
-margin_bottom = 149.0
+margin_bottom = 208.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = true
 mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_colors/default_color = Color( 1, 1, 1, 1 )
+theme = SubResource( 4 )
 bbcode_enabled = false
-bbcode_text = "Epilogue
-The last humans survivors went mad
-They were trying to hand their own advanced technology to their enemies. Who would've guessed this turn of events? Now, you alone must find a way to give this powerful technology. Perhaps you will throw it to the nearest star. Or perhaps you will use it to explore the entire universe. Who knows…
+bbcode_text = "Epilogue.
+The last humans survivors went mad.
+They were trying to hand their own advanced technology to their enemies. Who would've guessed this turn of events? Now, you alone must find a way to give this powerful technology. 
+Perhaps you will throw it to the nearest star. Or perhaps you will use it to explore the entire universe. Who knows…
 "
 visible_characters = -1
 percent_visible = 1.0
 meta_underlined = true
 tab_size = 4
-text = "Epilogue
-The last humans survivors went mad
-They were trying to hand their own advanced technology to their enemies. Who would've guessed this turn of events? Now, you alone must find a way to give this powerful technology. Perhaps you will throw it to the nearest star. Or perhaps you will use it to explore the entire universe. Who knows…
+text = "Epilogue.
+The last humans survivors went mad.
+They were trying to hand their own advanced technology to their enemies. Who would've guessed this turn of events? Now, you alone must find a way to give this powerful technology. 
+Perhaps you will throw it to the nearest star. Or perhaps you will use it to explore the entire universe. Who knows…
 "
 scroll_active = true
 scroll_following = false
 selection_enabled = false
 override_selected_font_color = false
-_sections_unfolded = [ "BBCode", "custom_colors" ]
+_sections_unfolded = [ "BBCode", "Theme", "custom_colors" ]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="2"]
 
-stream = ExtResource( 4 )
+stream = ExtResource( 5 )
 volume_db = 0.0
+pitch_scale = 1.0
 autoplay = true
 mix_target = 0
 bus = "Master"
