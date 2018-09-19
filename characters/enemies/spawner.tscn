@@ -10,6 +10,7 @@ velocity = Vector2( 0, 0 )
 wait_time = 0.1
 enemy_type = 0
 spawn_origin = ""
+background_spawn = false
 
 [node name="scene_container" type="Node" parent="." index="0"]
 

@@ -81,6 +81,29 @@ func shake():
 	get_node("shaking").shake()
 	pass
 
+func start_hyper_velocity():
+	get_node("hyper_velocity_effect/beam_spawner_01").start()
+	get_node("hyper_velocity_effect/beam_spawner_02").start()
+	get_node("hyper_velocity_effect/beam_spawner_03").start()
+	get_node("hyper_velocity_effect/beam_spawner_04").start()
+	get_node("hyper_velocity_effect/beam_spawner_05").start()
+	get_node("hyper_velocity_effect/beam_spawner_06").start()
+	get_node("hyper_velocity_effect/beam_spawner_07").start()
+	get_node("hyper_velocity_effect/beam_spawner_08").start()
+	get_node("hyper_velocity_effect/beam_spawner_09").start()
+	get_node("hyper_velocity_effect/beam_spawner_10").start()
+
+func end_hyper_velocity():
+	get_node("hyper_velocity_effect/beam_spawner_01").stop()
+	get_node("hyper_velocity_effect/beam_spawner_02").stop()
+	get_node("hyper_velocity_effect/beam_spawner_03").stop()
+	get_node("hyper_velocity_effect/beam_spawner_04").stop()
+	get_node("hyper_velocity_effect/beam_spawner_05").stop()
+	get_node("hyper_velocity_effect/beam_spawner_06").stop()
+	get_node("hyper_velocity_effect/beam_spawner_07").stop()
+	get_node("hyper_velocity_effect/beam_spawner_08").stop()
+	get_node("hyper_velocity_effect/beam_spawner_09").stop()
+	get_node("hyper_velocity_effect/beam_spawner_10").stop()
 
 func get_scroll_offset():
 	return get_node("ParallaxBackground").get_scroll_offset()

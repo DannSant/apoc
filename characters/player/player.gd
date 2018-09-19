@@ -167,12 +167,14 @@ func activate_hyper_velocity():
 		return false
 	
 	bk_bg_offset_step = get_parent().get_node("bg").get_offset_step()
-	get_parent().get_node("bg").set_offset_step(bk_bg_offset_step*5)
+	get_parent().get_node("bg").set_offset_step(bk_bg_offset_step*7)
+	get_parent().get_node("bg").start_hyper_velocity()
 	get_node("hyper_velocity_deactivate").start()
 	return true
 
 func _on_hyper_velocity_deactivate_timeout():
 	get_parent().get_node("bg").set_offset_step(bk_bg_offset_step)
+	get_parent().get_node("bg").end_hyper_velocity()
 	pass
 	
 func warp(stage):

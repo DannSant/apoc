@@ -9,7 +9,7 @@ func _ready():
 func _process(delta):
 	translate(velocity * delta)
 	
-	if get_position().y+40 < 0 || get_position().y-40 > get_viewport_rect().size.y || get_position().x - 40 > get_viewport_rect().size.x || get_position().x < 40:
+	if get_position().y+40 < 0 || get_position().y-40 > get_viewport_rect().size.y || get_position().x - 40 > get_viewport_rect().size.x || get_position().x+40 < 0:
 		queue_free()
 	
 	pass

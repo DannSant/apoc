@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://shared/effects/beam.gd" type="Script" id=1]
+[ext_resource path="res://shared/effects/images/beam_01.png" type="Texture" id=2]
+
+[node name="beam" type="Node2D" index="0"]
+
+script = ExtResource( 1 )
+velocity = Vector2( -5000, 0 )
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+modulate = Color( 1, 1, 1, 0.0718039 )
+rotation = 3.14159
+scale = Vector2( 1, 0.1 )
+z_index = -1
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Animation", "Material", "Offset", "Pause", "Region", "Transform", "Visibility", "Z Index" ]
+
+

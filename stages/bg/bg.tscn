@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://stages/bg/bg.gd" type="Script" id=1]
 [ext_resource path="res://shared/effects/shaking.tscn" type="PackedScene" id=2]
+[ext_resource path="res://shared/effects/beam_spawner.tscn" type="PackedScene" id=3]
 
 [node name="bg" type="Node2D"]
 
@@ -39,5 +40,29 @@ scale = Vector2( 1, 1.01564 )
 _sections_unfolded = [ "Animation", "Material", "Offset", "Pause", "Region", "Transform", "Visibility", "Z Index" ]
 
 [node name="shaking" parent="." index="1" instance=ExtResource( 2 )]
+
+[node name="hyper_velocity_effect" type="Node2D" parent="." index="2"]
+
+[node name="beam_spawner_01" parent="hyper_velocity_effect" index="0" instance=ExtResource( 3 )]
+
+[node name="beam_spawner_02" parent="hyper_velocity_effect" index="1" instance=ExtResource( 3 )]
+
+[node name="beam_spawner_03" parent="hyper_velocity_effect" index="2" instance=ExtResource( 3 )]
+
+position = Vector2( 0, 1 )
+
+[node name="beam_spawner_04" parent="hyper_velocity_effect" index="3" instance=ExtResource( 3 )]
+
+[node name="beam_spawner_05" parent="hyper_velocity_effect" index="4" instance=ExtResource( 3 )]
+
+[node name="beam_spawner_06" parent="hyper_velocity_effect" index="5" instance=ExtResource( 3 )]
+
+[node name="beam_spawner_07" parent="hyper_velocity_effect" index="6" instance=ExtResource( 3 )]
+
+[node name="beam_spawner_08" parent="hyper_velocity_effect" index="7" instance=ExtResource( 3 )]
+
+[node name="beam_spawner_09" parent="hyper_velocity_effect" index="8" instance=ExtResource( 3 )]
+
+[node name="beam_spawner_10" parent="hyper_velocity_effect" index="9" instance=ExtResource( 3 )]
 
 
