@@ -11,7 +11,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 116.203, 52.3678 )
 
-[node name="player" type="Node2D"]
+[node name="player" type="Node2D" index="0"]
 
 position = Vector2( 66.8938, 264.911 )
 scale = Vector2( 0.3, 0.3 )
@@ -46,7 +46,7 @@ shape = SubResource( 1 )
 [node name="shield" type="Sprite" parent="." index="1"]
 
 visible = false
-modulate = Color( 1, 1, 1, 0.397804 )
+modulate = Color( 1, 1, 1, 0.276235 )
 position = Vector2( 20, 0 )
 scale = Vector2( 0.28, 0.28 )
 texture = ExtResource( 3 )
@@ -91,6 +91,7 @@ autostart = false
 
 stream = ExtResource( 5 )
 volume_db = -17.0
+pitch_scale = 1.0
 autoplay = false
 mix_target = 0
 bus = "Master"
