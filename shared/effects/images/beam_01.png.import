@@ -7,7 +7,10 @@ path="res://.import/beam_01.png-34d04a1b62b79634f5b10f0ac882e156.stex"
 [deps]
 
 source_file="res://shared/effects/images/beam_01.png"
+source_md5="2e0aef22f0d73b24477286e156e2f052"
+
 dest_files=[ "res://.import/beam_01.png-34d04a1b62b79634f5b10f0ac882e156.stex" ]
+dest_md5="f35a08bb356e6822291c55a450cf8b21"
 
 [params]
 
