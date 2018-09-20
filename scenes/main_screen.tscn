@@ -28,7 +28,7 @@ Label/fonts/font = null
 Label/styles/normal = null
 _sections_unfolded = [ "Label" ]
 
-[node name="main_screen" type="Node"]
+[node name="main_screen" type="Node" index="0"]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="." index="0"]
 
