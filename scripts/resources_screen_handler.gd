@@ -14,6 +14,10 @@ var attack_cost = 100
 var armor_cost = 300
 var speed_cost = 200
 
+var attack_increase_cost_factor = 100
+var armor_increase_cost_factor = 300
+var speed_increase_cost_factor = 200
+
 var next_scene = "res://stages/stage02/stage02.tscn"
 var next_stage_number =0
 
@@ -79,9 +83,22 @@ func _ready():
 	set_stage_map(current_stage)
 	if next_stage_number<=5:
 		_on_lore_button_pressed()
+	
+	increase_dificulty()
 		
 	print ("Current Stage: ", player_globals.get_cur_stage())
 	print ("Dificulty: ", game_globals.get_dificulty())
+	pass
+	
+func increase_dificulty():
+	if game_globals.get_dificulty()>0:
+		var level = floor(game_globals.get_dificulty()/game_globals.dificulty_factor);
+		attack_cost = (attack_increase_cost_factor*level)
+		armor_cost = (armor_increase_cost_factor*level)
+		speed_cost = (speed_increase_cost_factor*level)
+		attack_cost_lbl.text = str(attack_cost)
+		armor_cost_lbl.text = str(armor_cost)
+		speed_cost_lbl.text = str(speed_cost)
 	pass
 	
 func set_next_scene(current_stage):
