@@ -179,7 +179,6 @@ _sections_unfolded = [ "Rect", "Theme", "custom_fonts" ]
 
 [node name="credits_bg" type="ColorRect" parent="ui" index="4"]
 
-editor/display_folded = true
 visible = false
 anchor_left = 0.0
 anchor_top = 0.0
@@ -188,7 +187,7 @@ anchor_bottom = 0.0
 margin_left = 305.0
 margin_top = 28.0
 margin_right = 777.0
-margin_bottom = 354.0
+margin_bottom = 455.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -206,7 +205,7 @@ anchor_bottom = 0.0
 margin_left = 13.0
 margin_top = 1.0
 margin_right = 454.0
-margin_bottom = 345.0
+margin_bottom = 385.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = true
 mouse_filter = 0
@@ -276,6 +275,7 @@ _sections_unfolded = [ "BBCode", "Material", "Rect" ]
 
 stream = ExtResource( 6 )
 volume_db = 0.0
+pitch_scale = 1.0
 autoplay = true
 mix_target = 0
 bus = "Master"

@@ -62,13 +62,15 @@ func move(delta):
 	var mouse_position = get_viewport().get_mouse_position() + Vector2(80,0)
 	var pos_diff = (mouse_position - get_position())
 	
+	if shield_activated:
+		get_node("shield").rotate(delta/3)
+	
 	if abs(pos_diff.x) > 120 || abs(pos_diff.y) > 120:
 		return
 	
 	var motion = pos_diff*delta*20
 	
-	if shield_activated:
-		get_node("shield").rotate(delta/3)
+	
 	
 	if mouse_position.x > view_size.size.x-ACTION_MARGIN_X || mouse_position.y > view_size.size.y-ACTION_MARGIN_Y || mouse_position.y < ACTION_MARGIN_Y:
 		return
