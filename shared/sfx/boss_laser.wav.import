@@ -7,7 +7,10 @@ path="res://.import/boss_laser.wav-6d0f8e75e3ac8e6e652e680775241755.sample"
 [deps]
 
 source_file="res://shared/sfx/boss_laser.wav"
+source_md5="7c1b780e98344446703475f3b64f47e8"
+
 dest_files=[ "res://.import/boss_laser.wav-6d0f8e75e3ac8e6e652e680775241755.sample" ]
+dest_md5="cc5ae16b776c1aaaf1723f8f7e417c09"
 
 [params]
 

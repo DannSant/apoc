@@ -28,6 +28,9 @@ func _ready():
 	get_node("ParallaxBackground/ParallaxLayer/Sprite").texture = textures[current_stage-1]
 	level_width = (get_node("ParallaxBackground/ParallaxLayer/Sprite").texture.get_width()) - 800
 	boss = get_parent().get_node("enemy_boss")
+	if boss_level:
+		game_globals.boss_is_alive()
+	
 	set_process(true)
 	pass
 
@@ -59,7 +62,7 @@ func _process(delta):
 		if progress>=100:
 			offset_step=0
 		
-		if !"Node" in str(boss):
+		if !game_globals.is_boss_alive():
 			debugger = "boss level - death"
 			if !game_finished:
 				game_finished=true

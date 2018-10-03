@@ -42,6 +42,7 @@ func take_damage(damage):
 		#get_node("../../../../hud").add_resources(resources_value)
 
 		do_explotion()
+		game_globals.boss_is_dead()
 		queue_free()
 	
 	var bg_offset_step = get_parent().get_node("bg").get_offset_step()
