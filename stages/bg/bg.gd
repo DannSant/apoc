@@ -20,6 +20,8 @@ var game_finished = false
 
 var boss
 
+var debugger = "";
+
 
 func _ready():
 	var textures = [texture_stage_01, texture_stage_02, texture_stage_03, texture_stage_04, texture_stage_05]
@@ -43,20 +45,28 @@ func _process(delta):
 	get_parent().get_node("hud").add_progress(progress)
 	
 	if progress>=100 and !boss_level:
+		debugger = "no boss"
 		offset_step=0
 		if !game_finished:
 			game_finished=true
 			get_parent().get_node("player").warp(current_stage)
 		return
+	else :
+		debugger = "no boss - playing"
 	
 	if boss_level:
+		debugger = "boss level - alive"
 		if progress>=100:
 			offset_step=0
 		
-		if str(boss) == "[Deleted Object]":
+		if !"Node" in str(boss):
+			debugger = "boss level - death"
 			if !game_finished:
 				game_finished=true
 				get_parent().get_node("player").warp(current_stage)
+		else:
+			debugger = "boss level - else?"
+			debugger = debugger + " " + str(boss)
 				
 		return
 

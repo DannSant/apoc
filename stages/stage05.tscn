@@ -37,7 +37,6 @@ _sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "M
 
 wait_time = 15.0
 enemy_type = 4
-background_spawn = false
 
 [node name="enemy_boss" parent="." index="3" instance=ExtResource( 5 )]
 

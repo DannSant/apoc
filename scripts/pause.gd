@@ -20,12 +20,13 @@ onready var high_score_label = $HighScore/lbl_score_number
 
 onready var hud = get_node("../hud")
 
+onready var bg = get_node("../bg")
+
 
 
 
 func _ready():
 	lore_text.text = get_lore_text()
-	#$Pause/game_over_label.text = $Pause/game_over_label.text + " " + str(game_globals.get_dificulty())
 	pass
 	
 func get_lore_text():
