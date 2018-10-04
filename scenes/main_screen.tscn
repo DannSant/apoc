@@ -28,7 +28,7 @@ Label/fonts/font = null
 Label/styles/normal = null
 _sections_unfolded = [ "Label" ]
 
-[node name="main_screen" type="Node"]
+[node name="main_screen" type="Node" index="0"]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="." index="0"]
 
@@ -275,6 +275,7 @@ _sections_unfolded = [ "BBCode", "Material", "Rect" ]
 
 stream = ExtResource( 6 )
 volume_db = 0.0
+pitch_scale = 1.0
 autoplay = true
 mix_target = 0
 bus = "Master"
