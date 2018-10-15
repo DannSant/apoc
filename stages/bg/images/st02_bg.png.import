@@ -7,10 +7,7 @@ path="res://.import/st02_bg.png-f0394f5f6618cb94273cf19d34665f0f.stex"
 [deps]
 
 source_file="res://stages/bg/images/st02_bg.png"
-source_md5="49b9897889f08eb94d9a1f6625ec341c"
-
 dest_files=[ "res://.import/st02_bg.png-f0394f5f6618cb94273cf19d34665f0f.stex" ]
-dest_md5="0b0ed22e7c2d330f587c22c59e5c2a38"
 
 [params]
 
