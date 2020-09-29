@@ -86,7 +86,7 @@ use_filter = false
 font_data = ExtResource( 10 )
 _sections_unfolded = [ "Font", "Resource", "Settings" ]
 
-[node name="resources_screen" type="Node"]
+[node name="resources_screen" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
@@ -125,6 +125,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 texture = ExtResource( 3 )
+expand = true
 stretch_mode = 0
 _sections_unfolded = [ "Rect", "Visibility" ]
 

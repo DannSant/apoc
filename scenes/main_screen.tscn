@@ -28,7 +28,7 @@ Label/fonts/font = null
 Label/styles/normal = null
 _sections_unfolded = [ "Label" ]
 
-[node name="main_screen" type="Node"]
+[node name="main_screen" type="Node" index="0"]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="." index="0"]
 
@@ -213,7 +213,9 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 bbcode_enabled = false
-bbcode_text = "Credits
+bbcode_text = "Apoc 3.0.1
+
+Credits
 
 Game Design
 	Luis Cisneros Medina
@@ -241,7 +243,9 @@ visible_characters = -1
 percent_visible = 1.0
 meta_underlined = true
 tab_size = 4
-text = "Credits
+text = "Apoc 3.0.1
+
+Credits
 
 Game Design
 	Luis Cisneros Medina
